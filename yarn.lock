@@ -1991,11 +1991,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/extension-dapp@npm:^0.51.1":
-  version: 0.51.1
-  resolution: "@polkadot/extension-dapp@npm:0.51.1"
+"@polkadot/extension-dapp@npm:^0.52.2":
+  version: 0.52.2
+  resolution: "@polkadot/extension-dapp@npm:0.52.2"
   dependencies:
-    "@polkadot/extension-inject": "npm:0.51.1"
+    "@polkadot/extension-inject": "npm:0.52.2"
     "@polkadot/util": "npm:^13.0.2"
     "@polkadot/util-crypto": "npm:^13.0.2"
     tslib: "npm:^2.6.2"
@@ -2003,7 +2003,7 @@ __metadata:
     "@polkadot/api": "*"
     "@polkadot/util": "*"
     "@polkadot/util-crypto": "*"
-  checksum: 10/b2a7a65873a353e87571b22e0c0f07a3b000e29c36e26d4671023aead13854c3fbca248ef9c717a3eb6d41caebaf2f040d550985d82b79fc2e3d3ba5e2c3888e
+  checksum: 10/698139db2dad79af4c13f617f48696dc0aa66207e6636749da00a5d752548ccad523d769d8dcb161ea29905e725d51df70b8b620becbee45f950f7b4af018bc7
   languageName: node
   linkType: hard
 
@@ -2022,6 +2022,24 @@ __metadata:
     "@polkadot/api": "*"
     "@polkadot/util": "*"
   checksum: 10/1cb43125a29c0632af1291a239fc43d7bbe6de988e8dd8b6633403daa3a26fc1605d0bcaadd56036ddbbc109f066dee6335546e1bd78460cd5afd2fe975920ab
+  languageName: node
+  linkType: hard
+
+"@polkadot/extension-inject@npm:0.52.2":
+  version: 0.52.2
+  resolution: "@polkadot/extension-inject@npm:0.52.2"
+  dependencies:
+    "@polkadot/api": "npm:^12.3.1"
+    "@polkadot/rpc-provider": "npm:^12.3.1"
+    "@polkadot/types": "npm:^12.3.1"
+    "@polkadot/util": "npm:^13.0.2"
+    "@polkadot/util-crypto": "npm:^13.0.2"
+    "@polkadot/x-global": "npm:^13.0.2"
+    tslib: "npm:^2.6.2"
+  peerDependencies:
+    "@polkadot/api": "*"
+    "@polkadot/util": "*"
+  checksum: 10/661732b3774f2dcd4475a200d29b1db994a6a56cdced331c91f79aa70156b42e6cf509c9f31176378d73ea0826b7ce997965efb9f276fba9a1ccd2e73e549244
   languageName: node
   linkType: hard
 
@@ -2097,7 +2115,7 @@ __metadata:
   dependencies:
     "@polkadot/api": "npm:^12.2.1"
     "@polkadot/extension-compat-metamask": "npm:^0.51.1"
-    "@polkadot/extension-dapp": "npm:^0.51.1"
+    "@polkadot/extension-dapp": "npm:^0.52.2"
     "@polkadot/rpc-provider": "npm:^12.2.1"
     fflate: "npm:^0.8.1"
     rxjs: "npm:^7.8.1"
