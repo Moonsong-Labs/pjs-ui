@@ -22,7 +22,7 @@
     "@darwinia/types": "2.8.10",
     "@darwinia/types-known": "2.8.10",
     "@digitalnative/type-definitions": "1.1.27",
-    "@docknetwork/node-types": "0.16.0",
+    "@docknetwork/node-types": "0.17.0",
     "@edgeware/node-types": "3.6.2-wako",
     "@equilab/definitions": "1.4.18",
     "@fragnova/api-augment": "0.1.0-spec-1.0.4-mainnet",
