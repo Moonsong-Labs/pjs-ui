@@ -2120,7 +2120,7 @@ __metadata:
     "@polkadot/react-identicon": "npm:^3.8.3"
     "@polkadot/react-qr": "npm:^3.8.3"
     "@polkadot/react-query": "npm:^0.142.2-18-x"
-    "@polkadot/ui-keyring": "npm:^3.8.3"
+    "@polkadot/ui-keyring": "npm:^3.9.1"
     "@polkadot/ui-settings": "npm:^3.8.3"
     "@polkadot/util": "npm:^13.0.2"
     "@polkadot/util-crypto": "npm:^13.0.2"
@@ -2426,12 +2426,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/ui-keyring@npm:^3.8.3":
-  version: 3.8.3
-  resolution: "@polkadot/ui-keyring@npm:3.8.3"
+"@polkadot/ui-keyring@npm:^3.9.1":
+  version: 3.9.1
+  resolution: "@polkadot/ui-keyring@npm:3.9.1"
   dependencies:
     "@polkadot/keyring": "npm:^13.0.2"
-    "@polkadot/ui-settings": "npm:3.8.3"
+    "@polkadot/ui-settings": "npm:3.9.1"
     "@polkadot/util": "npm:^13.0.2"
     "@polkadot/util-crypto": "npm:^13.0.2"
     mkdirp: "npm:^3.0.1"
@@ -2442,7 +2442,7 @@ __metadata:
     "@polkadot/keyring": "*"
     "@polkadot/ui-settings": "*"
     "@polkadot/util": "*"
-  checksum: 10/d8b3ebf3da39ebbcabe1e0c41c9ed731a14c186c1698c598b4aac6217162c7174453860d06582200b10bc687fc75ec713238ce1687efb4672de989ab728ee99f
+  checksum: 10/eec438ef2ad9363d77f51d60df9802f1cad3379661883a9412f9ca1af44e31444fc7c04eec1ec7ecf2ae76af1718ffce8e335dcf572d89a6ffc6403bf6c36423
   languageName: node
   linkType: hard
 
@@ -2459,6 +2459,22 @@ __metadata:
     "@polkadot/networks": "*"
     "@polkadot/util": "*"
   checksum: 10/be6d9f5111ba94b9e86b3348bd0f7e68008611b54fcc159b3a163d7331b345f1552b2d1ba7b6b763387607110e06eecd799b7ad61ee4d5847056b128a85bfdcf
+  languageName: node
+  linkType: hard
+
+"@polkadot/ui-settings@npm:3.9.1":
+  version: 3.9.1
+  resolution: "@polkadot/ui-settings@npm:3.9.1"
+  dependencies:
+    "@polkadot/networks": "npm:^13.0.2"
+    "@polkadot/util": "npm:^13.0.2"
+    eventemitter3: "npm:^5.0.1"
+    store: "npm:^2.0.12"
+    tslib: "npm:^2.6.2"
+  peerDependencies:
+    "@polkadot/networks": "*"
+    "@polkadot/util": "*"
+  checksum: 10/d3a28af0233f2ee9a8453501de3dd2fabc46bc98cb4c0e46a79654c87a0a41f3148dd6949b796932a4c12fc974b2b924d9eb0e76f91f7ce9ea27e5012e1e606a
   languageName: node
   linkType: hard
 
