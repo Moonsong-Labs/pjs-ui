@@ -46,7 +46,7 @@
     "react-tooltip": "^4.5.1",
     "rehype-raw": "^7.0.0",
     "semantic-ui-css": "^2.5.0",
-    "semantic-ui-react": "^0.88.2",
+    "semantic-ui-react": "^2.1.5",
     "store": "^2.0.12",
     "styled-components": "^6.1.1",
     "styled-theming": "^2.2.0"

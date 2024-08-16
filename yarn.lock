@@ -119,12 +119,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.22.5, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.22.5, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.9.2":
   version: 7.23.2
   resolution: "@babel/runtime@npm:7.23.2"
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
   checksum: 10/abdcbdd590c7e31762e1bdab94dd466823c8bcedd3ff2fde85eeb94dac7cccaef151ac37c428bda7018ededd27c9a82b4dfeb621f978ad934232475a902f8e3a
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.10.5":
+  version: 7.25.0
+  resolution: "@babel/runtime@npm:7.25.0"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10/6870e9e0e9125075b3aeba49a266f442b10820bfc693019eb6c1785c5a0edbe927e98b8238662cdcdba17842107c040386c3b69f39a0a3b217f9d00ffe685b27
   languageName: node
   linkType: hard
 
@@ -389,6 +398,31 @@ __metadata:
   bin:
     rlp: bin/rlp
   checksum: 10/bfdffd634ce72f3b17e3d085d071f2fe7ce9680aebdf10713d74b30afd80ef882d17f19ff7175fcb049431a56e800bd3558d3b028bd0d82341927edb303ab450
+  languageName: node
+  linkType: hard
+
+"@fluentui/react-component-event-listener@npm:~0.63.0":
+  version: 0.63.1
+  resolution: "@fluentui/react-component-event-listener@npm:0.63.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.10.4"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+    react-dom: ^16.8.0 || ^17 || ^18
+  checksum: 10/15a8b5328160de94442af321f6a9ae941e3dcc365883eebe308b0b212309953b7529e59d35881407749b8fd9391e5601999a6b42e35accf5ee0463985ca77c80
+  languageName: node
+  linkType: hard
+
+"@fluentui/react-component-ref@npm:~0.63.0":
+  version: 0.63.1
+  resolution: "@fluentui/react-component-ref@npm:0.63.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.10.4"
+    react-is: "npm:^16.6.3"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+    react-dom: ^16.8.0 || ^17 || ^18
+  checksum: 10/de1525096b8eaaf6060d761d49f855f2169ab8c90298817ba19db59224ebfda7e82edb131d5368be052dbcfdbb35aaab1edb3254568d5cfb90be3474b88d9318
   languageName: node
   linkType: hard
 
@@ -2147,7 +2181,7 @@ __metadata:
     react-tooltip: "npm:^4.5.1"
     rehype-raw: "npm:^7.0.0"
     semantic-ui-css: "npm:^2.5.0"
-    semantic-ui-react: "npm:^0.88.2"
+    semantic-ui-react: "npm:^2.1.5"
     store: "npm:^2.0.12"
     styled-components: "npm:^6.1.1"
     styled-theming: "npm:^2.2.0"
@@ -2685,6 +2719,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.6.0":
+  version: 2.11.8
+  resolution: "@popperjs/core@npm:2.11.8"
+  checksum: 10/ddd16090cde777aaf102940f05d0274602079a95ad9805bd20bc55dcc7c3a2ba1b99dd5c73e5cc2753c3d31250ca52a67d58059459d7d27debb983a9f552936c
+  languageName: node
+  linkType: hard
+
 "@remix-run/router@npm:1.14.0":
   version: 1.14.0
   resolution: "@remix-run/router@npm:1.14.0"
@@ -2927,16 +2968,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-ui-react/event-stack@npm:^3.1.0":
-  version: 3.1.1
-  resolution: "@semantic-ui-react/event-stack@npm:3.1.1"
+"@semantic-ui-react/event-stack@npm:^3.1.3":
+  version: 3.1.3
+  resolution: "@semantic-ui-react/event-stack@npm:3.1.3"
   dependencies:
     exenv: "npm:^1.2.2"
     prop-types: "npm:^15.6.2"
   peerDependencies:
-    react: ^16.0.0
-    react-dom: ^16.0.0
-  checksum: 10/fa2ebf384a0bc35d07e4a4ea7c29065461d5955909d580fbab8f88fb51183077e5aa9fa78f3df89ea2de0105cd3d35bfcf8bbe63d91027a926cdd2aa684ee8a6
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 10/ffdb136adc9bfcc8a9ed12466bf91e73a5cffd1e707cb65da4a5b06e92d43e4f57ecd4c886f141518fa5b63915a1ba32bb7afe9453e16ae0186837cd9fc5ffed
   languageName: node
   linkType: hard
 
@@ -2978,33 +3019,6 @@ __metadata:
   dependencies:
     "@open-web3/orml-type-definitions": "npm:1.1.4"
   checksum: 10/31ee7e11ff062ec3775faa3bc1c03fad534cb8cacbbb029ae62a1c28e2b07dd317922c87fc81be33bd67889754ed1d1b1444f708469026dc1ef8a48df1c698f8
-  languageName: node
-  linkType: hard
-
-"@stardust-ui/react-component-event-listener@npm:~0.38.0":
-  version: 0.38.0
-  resolution: "@stardust-ui/react-component-event-listener@npm:0.38.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.1.2"
-    prop-types: "npm:^15.7.2"
-  peerDependencies:
-    react: ^16.8.0
-    react-dom: ^16.8.0
-  checksum: 10/27daee5e5728b9cb0bc494d5754a962b0f1bc2648030a149443444eac1f2536abd1fd8a00b6c4ef95d637ee196631bcdbb8901c6c29bc64d9eae648a35487170
-  languageName: node
-  linkType: hard
-
-"@stardust-ui/react-component-ref@npm:~0.38.0":
-  version: 0.38.0
-  resolution: "@stardust-ui/react-component-ref@npm:0.38.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.1.2"
-    prop-types: "npm:^15.7.2"
-    react-is: "npm:^16.6.3"
-  peerDependencies:
-    react: ^16.8.0
-    react-dom: ^16.8.0
-  checksum: 10/912ec2d7ba15a85e5ccbd76b81b263fefe54f2059b17ded21c95cdeba0d4bdd205cfec323c42ccaa25e5c98302f71d28885a44f9a857b83d64ac802809d5f38b
   languageName: node
   linkType: hard
 
@@ -5969,13 +5983,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.6":
-  version: 2.2.6
-  resolution: "classnames@npm:2.2.6"
-  checksum: 10/a241cdac6a06d1572e4358eff219ff9be4e2bb83f0a4080b413f32f691e8b7ba4d635b1a99123cbdfef1604e10f398b6f1433364d5645004eea957494ef1f3e8
-  languageName: node
-  linkType: hard
-
 "clean-css@npm:^5.2.2":
   version: 5.3.1
   resolution: "clean-css@npm:5.3.1"
@@ -6096,6 +6103,13 @@ __metadata:
   version: 2.1.2
   resolution: "clone@npm:2.1.2"
   checksum: 10/d9c79efba655f0bf601ab299c57eb54cbaa9860fb011aee9d89ed5ac0d12df1660ab7642fddaabb9a26b7eff0e117d4520512cb70798319ff5d30a111b5310c2
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^1.1.1":
+  version: 1.2.1
+  resolution: "clsx@npm:1.2.1"
+  checksum: 10/5ded6f61f15f1fa0350e691ccec43a28b12fb8e64c8e94715f2a937bc3722d4c3ed41d6e945c971fc4dcc2a7213a43323beaf2e1c28654af63ba70c9968a8643
   languageName: node
   linkType: hard
 
@@ -6528,19 +6542,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"create-react-context@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "create-react-context@npm:0.3.0"
-  dependencies:
-    gud: "npm:^1.0.0"
-    warning: "npm:^4.0.3"
-  peerDependencies:
-    prop-types: ^15.0.0
-    react: ^0.14.0 || ^15.0.0 || ^16.0.0
-  checksum: 10/3ae9d5af6a36993c5b9928967b4258e8d327373def6fb5964cebfcb00e6dce48297317adb9346bb8fad7eed35e6b39f3dbbac8b6ab29015de48d7ee60774f665
-  languageName: node
-  linkType: hard
-
 "cross-fetch@npm:^4.0.0":
   version: 4.0.0
   resolution: "cross-fetch@npm:4.0.0"
@@ -6811,20 +6812,6 @@ __metadata:
   dependencies:
     mimic-response: "npm:^3.1.0"
   checksum: 10/d377cf47e02d805e283866c3f50d3d21578b779731e8c5072d6ce8c13cc31493db1c2f6784da9d1d5250822120cefa44f1deab112d5981015f2e17444b763812
-  languageName: node
-  linkType: hard
-
-"deep-equal@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "deep-equal@npm:1.1.1"
-  dependencies:
-    is-arguments: "npm:^1.0.4"
-    is-date-object: "npm:^1.0.1"
-    is-regex: "npm:^1.0.4"
-    object-is: "npm:^1.0.1"
-    object-keys: "npm:^1.1.1"
-    regexp.prototype.flags: "npm:^1.2.0"
-  checksum: 10/3212af3e6b406391a9e94ebc18223032615ee8d1be14a2161137a5aac35c474d3471f2ffe8603d7593296f7ecf7341410faf3a1b57a76229a70775518dacfe12
   languageName: node
   linkType: hard
 
@@ -9596,13 +9583,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gud@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "gud@npm:1.0.0"
-  checksum: 10/3e2eb37cf794364077c18f036d6aa259c821c7fd188f2b7935cb00d589d82a41e0ebb1be809e1a93679417f62f1ad0513e745c3cf5329596e489aef8c5e5feae
-  languageName: node
-  linkType: hard
-
 "gulp-sort@npm:^2.0.0":
   version: 2.0.0
   resolution: "gulp-sort@npm:2.0.0"
@@ -10861,7 +10841,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-regex@npm:^1.0.4, is-regex@npm:^1.1.4":
+"is-regex@npm:^1.1.4":
   version: 1.1.4
   resolution: "is-regex@npm:1.1.4"
   dependencies:
@@ -11422,7 +11402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"keyboard-key@npm:^1.0.4":
+"keyboard-key@npm:^1.1.0":
   version: 1.1.0
   resolution: "keyboard-key@npm:1.1.0"
   checksum: 10/2fbd678dd8c53be62f1fe2c4d12ba1d54a01945f70969f48ee61599ed83289c1654d248b74950006d8756df5a0976bb6c8a88ec2574353d8c1363195a09ec2ed
@@ -11564,6 +11544,13 @@ __metadata:
   dependencies:
     p-locate: "npm:^5.0.0"
   checksum: 10/72eb661788a0368c099a184c59d2fee760b3831c9c1c33955e8a19ae4a21b4116e53fa736dc086cdeb9fce9f7cc508f2f92d2d3aae516f133e16a2bb59a39f5a
+  languageName: node
+  linkType: hard
+
+"lodash-es@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash-es@npm:4.17.21"
+  checksum: 10/03f39878ea1e42b3199bd3f478150ab723f93cc8730ad86fec1f2804f4a07c6e30deaac73cad53a88e9c3db33348bb8ceeb274552390e7a75d7849021c02df43
   languageName: node
   linkType: hard
 
@@ -13008,7 +12995,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-is@npm:^1.0.1, object-is@npm:^1.1.5":
+"object-is@npm:^1.1.5":
   version: 1.1.5
   resolution: "object-is@npm:1.1.5"
   dependencies:
@@ -13678,13 +13665,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"popper.js@npm:^1.14.4":
-  version: 1.16.1
-  resolution: "popper.js@npm:1.16.1"
-  checksum: 10/71338c86faf9b66ce60c3cdd7fb2ed742944e5d2765a188f269239fee2980aa6223b77b41302d1b6eb7d724e611092f9a2576d0048ac2071b605291abc72c0cf
-  languageName: node
-  linkType: hard
-
 "postcss-modules-extract-imports@npm:^3.0.0":
   version: 3.0.0
   resolution: "postcss-modules-extract-imports@npm:3.0.0"
@@ -13977,7 +13957,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -14302,6 +14282,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.0.1":
+  version: 3.2.2
+  resolution: "react-fast-compare@npm:3.2.2"
+  checksum: 10/a6826180ba75cefba1c8d3ac539735f9b627ca05d3d307fe155487f5d0228d376dac6c9708d04a283a7b9f9aee599b637446635b79c8c8753d0b4eece56c125c
+  languageName: node
+  linkType: hard
+
 "react-i18next@npm:^13.5.0":
   version: 13.5.0
   resolution: "react-i18next@npm:13.5.0"
@@ -14320,10 +14307,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.13.1, react-is@npm:^16.6.3, react-is@npm:^16.7.0, react-is@npm:^16.8.6":
+"react-is@npm:^16.13.1, react-is@npm:^16.6.3, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 10/5aa564a1cde7d391ac980bedee21202fc90bdea3b399952117f54fb71a932af1e5902020144fb354b4690b2414a0c7aafe798eb617b76a3d441d956db7726fdf
+  languageName: node
+  linkType: hard
+
+"react-is@npm:^16.8.6 || ^17.0.0 || ^18.0.0":
+  version: 18.3.1
+  resolution: "react-is@npm:18.3.1"
+  checksum: 10/d5f60c87d285af24b1e1e7eaeb123ec256c3c8bdea7061ab3932e3e14685708221bf234ec50b21e10dd07f008f1b966a2730a0ce4ff67905b3872ff2042aec22
   languageName: node
   linkType: hard
 
@@ -14362,20 +14356,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-popper@npm:^1.3.4":
-  version: 1.3.7
-  resolution: "react-popper@npm:1.3.7"
+"react-popper@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "react-popper@npm:2.3.0"
   dependencies:
-    "@babel/runtime": "npm:^7.1.2"
-    create-react-context: "npm:^0.3.0"
-    deep-equal: "npm:^1.1.1"
-    popper.js: "npm:^1.14.4"
-    prop-types: "npm:^15.6.1"
-    typed-styles: "npm:^0.0.7"
+    react-fast-compare: "npm:^3.0.1"
     warning: "npm:^4.0.2"
   peerDependencies:
-    react: 0.14.x || ^15.0.0 || ^16.0.0
-  checksum: 10/adfc527c9daefd7f68f9f0f4bd6efc776828d872aa35543f138d44d7f02ebb750e858eb8e6b0d0f12d8fe358dd1a15c35819999aea16db178cf6e86f0482650f
+    "@popperjs/core": ^2.0.0
+    react: ^16.8.0 || ^17 || ^18
+    react-dom: ^16.8.0 || ^17 || ^18
+  checksum: 10/2afc495479ae4b9e67f9a1642debd7121947fe71a00c5b326301adb8288a18dca53ebd836fe9c3b7a4e2feb838df0abe8e044eb278e89b1c5d50978b0b93d0ac
   languageName: node
   linkType: hard
 
@@ -14647,7 +14638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regexp.prototype.flags@npm:^1.2.0, regexp.prototype.flags@npm:^1.4.3, regexp.prototype.flags@npm:^1.5.1":
+"regexp.prototype.flags@npm:^1.4.3, regexp.prototype.flags@npm:^1.5.1":
   version: 1.5.1
   resolution: "regexp.prototype.flags@npm:1.5.1"
   dependencies:
@@ -15310,25 +15301,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semantic-ui-react@npm:^0.88.2":
-  version: 0.88.2
-  resolution: "semantic-ui-react@npm:0.88.2"
+"semantic-ui-react@npm:^2.1.5":
+  version: 2.1.5
+  resolution: "semantic-ui-react@npm:2.1.5"
   dependencies:
-    "@babel/runtime": "npm:^7.1.2"
-    "@semantic-ui-react/event-stack": "npm:^3.1.0"
-    "@stardust-ui/react-component-event-listener": "npm:~0.38.0"
-    "@stardust-ui/react-component-ref": "npm:~0.38.0"
-    classnames: "npm:^2.2.6"
-    keyboard-key: "npm:^1.0.4"
-    lodash: "npm:^4.17.15"
+    "@babel/runtime": "npm:^7.10.5"
+    "@fluentui/react-component-event-listener": "npm:~0.63.0"
+    "@fluentui/react-component-ref": "npm:~0.63.0"
+    "@popperjs/core": "npm:^2.6.0"
+    "@semantic-ui-react/event-stack": "npm:^3.1.3"
+    clsx: "npm:^1.1.1"
+    keyboard-key: "npm:^1.1.0"
+    lodash: "npm:^4.17.21"
+    lodash-es: "npm:^4.17.21"
     prop-types: "npm:^15.7.2"
-    react-is: "npm:^16.8.6"
-    react-popper: "npm:^1.3.4"
+    react-is: "npm:^16.8.6 || ^17.0.0 || ^18.0.0"
+    react-popper: "npm:^2.3.0"
     shallowequal: "npm:^1.1.0"
   peerDependencies:
-    react: ^16.8.0
-    react-dom: ^16.8.0
-  checksum: 10/b18a417acae1eef46e538724fdcab814f330ecdb5187e093b10e0ed5decad354175b0393c34f37c8720309d5f8380a5597ac5de9ed7fbd78074854660e229f4c
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10/9796f5e49436853e3f8c9c02d93ad7ccf6f78707967f33de04401573c761060490e81e5a13216015a96ad5b7cd1c375d86a09a5ae884b1bf13a3df5fdf6a5da2
   languageName: node
   linkType: hard
 
@@ -16973,13 +16966,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typed-styles@npm:^0.0.7":
-  version: 0.0.7
-  resolution: "typed-styles@npm:0.0.7"
-  checksum: 10/24704459dd5119729a5c20d156f60a1a74489e0a6a57fc6bc93a0d167c805675cc3cadd42ae5d99d7906762e951a44bca9558101353c9d37bedbe8b1e6bf6e51
-  languageName: node
-  linkType: hard
-
 "typedarray-to-buffer@npm:^3.1.5":
   version: 3.1.5
   resolution: "typedarray-to-buffer@npm:3.1.5"
@@ -17503,7 +17489,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"warning@npm:^4.0.2, warning@npm:^4.0.3":
+"warning@npm:^4.0.2":
   version: 4.0.3
   resolution: "warning@npm:4.0.3"
   dependencies:
