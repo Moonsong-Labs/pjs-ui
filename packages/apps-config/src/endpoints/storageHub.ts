@@ -14,55 +14,33 @@ import { chainsStorageHubSVG } from '../ui/logos/chains/generated/storage-hubSVG
 // IMPORTANT: Alphabetical based on text
 export const storageHubChains: Omit<EndpointOption, 'teleport'>[] = [
   {
-    info: 'bspNetBsp',
+    info: 'bsp',
     providers: {
       Local: 'ws://127.0.0.1:9666' as `wss://${string}`
     },
-    text: 'BSPNet: BSP',
+    text: 'BSP',
     ui: {
       color: '#00CCAB',
       logo: chainsStorageHubSVG
     }
   },
   {
-    info: 'bspNetUser',
-    providers: {
-      Local: 'ws://127.0.0.1:9888' as `wss://${string}`
-    },
-    text: 'BSPNet: User',
-    ui: {
-      color: '#F5F5F5',
-      logo: chainsStorageHubSVG
-    }
-  },
-  {
-    info: 'fullNetBsp',
-    providers: {
-      Local: 'ws://127.0.0.1:9666' as `wss://${string}`
-    },
-    text: 'FullNet: BSP',
-    ui: {
-      color: '#00CCAB',
-      logo: chainsStorageHubSVG
-    }
-  },
-  {
-    info: 'fullNetMsp',
+    info: 'msp',
     providers: {
       Local: 'ws://127.0.0.1:9777' as `wss://${string}`
     },
-    text: 'FullNet: MSP',
+    text: 'MSP',
     ui: {
       color: '#03e3fc',
       logo: chainsStorageHubSVG
     }
   },
   {
-    info: 'fullNetUser',
+    info: 'user',
     providers: {
       Local: 'ws://127.0.0.1:9888' as `wss://${string}`
     },
-    text: 'FullNet: User',
+    text: 'User',
     ui: {
       color: '#F5F5F5',
       logo: chainsStorageHubSVG
