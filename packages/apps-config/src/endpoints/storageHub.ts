@@ -58,7 +58,7 @@ export const storageHubChains: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
-    info: 'bspNetUser',
+    info: 'fullNetUser',
     providers: {
       Local: 'ws://127.0.0.1:9888' as `wss://${string}`
     },
