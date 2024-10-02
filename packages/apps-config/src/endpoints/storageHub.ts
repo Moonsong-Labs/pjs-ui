@@ -14,22 +14,22 @@ import { chainsStorageHubSVG } from '../ui/logos/chains/generated/storage-hubSVG
 // IMPORTANT: Alphabetical based on text
 export const storageHubChains: Omit<EndpointOption, 'teleport'>[] = [
   {
-    info: 'devNet',
+    info: 'bsp',
     providers: {
-      Local: 'ws://127.0.0.1:9944' as `wss://${string}`
+      Local: 'ws://127.0.0.1:9666' as `wss://${string}`
     },
-    text: 'DevNet',
+    text: 'BSP',
     ui: {
       color: '#00CCAB',
       logo: chainsStorageHubSVG
     }
   },
   {
-    info: 'bsp',
+    info: 'devNet',
     providers: {
-      Local: 'ws://127.0.0.1:9666' as `wss://${string}`
+      Local: 'ws://127.0.0.1:9944' as `wss://${string}`
     },
-    text: 'BSP',
+    text: 'DevNet',
     ui: {
       color: '#00CCAB',
       logo: chainsStorageHubSVG
