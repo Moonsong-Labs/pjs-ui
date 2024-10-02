@@ -36,17 +36,6 @@ export const storageHubChains: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
-    info: 'user',
-    providers: {
-      Local: 'ws://127.0.0.1:9888' as `wss://${string}`
-    },
-    text: 'User',
-    ui: {
-      color: '#F5F5F5',
-      logo: chainsStorageHubSVG
-    }
-  },
-  {
     info: 'devNet',
     providers: {
       Local: 'ws://127.0.0.1:9944' as `wss://${string}`
@@ -54,6 +43,17 @@ export const storageHubChains: Omit<EndpointOption, 'teleport'>[] = [
     text: 'DevNet',
     ui: {
       color: '#00CCAB',
+      logo: chainsStorageHubSVG
+    }
+  },
+  {
+    info: 'user',
+    providers: {
+      Local: 'ws://127.0.0.1:9888' as `wss://${string}`
+    },
+    text: 'User',
+    ui: {
+      color: '#F5F5F5',
       logo: chainsStorageHubSVG
     }
   }
