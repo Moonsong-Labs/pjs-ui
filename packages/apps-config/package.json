@@ -37,7 +37,7 @@
     "@peaqnetwork/type-definitions": "0.0.4",
     "@pendulum-chain/type-definitions": "0.3.8",
     "@phala/typedefs": "0.2.33",
-    "@polkadot/api": "^13.1.1",
+    "@polkadot/api": "^14.0.1",
     "@polkadot/api-derive": "^13.1.1",
     "@polkadot/networks": "^13.1.1",
     "@polkadot/react-identicon": "^3.9.1",
