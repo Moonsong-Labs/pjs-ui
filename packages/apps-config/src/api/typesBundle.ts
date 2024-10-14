@@ -20319,6 +20319,42 @@ export const typesBundle = {
         }
       ]
     },
+    "bittensor": {
+      "types": [
+        {
+          "minmax": [
+            0,
+            null
+          ],
+          "types": {
+            "Balance": "u64",
+            "NeuronMetadata": {
+              "version": "u32",
+              "ip": "u128",
+              "port": "u16",
+              "ipType": "u8",
+              "uid": "u32",
+              "netuid": "u16",
+              "modality": "u8",
+              "hotkey": "AccountId",
+              "coldkey": "AccountId",
+              "active": "u32",
+              "lastUpdate": "u64",
+              "priority": "u64",
+              "stake": "u64",
+              "rank": "u64",
+              "trust": "u64",
+              "consensus": "u64",
+              "incentive": "u64",
+              "dividends": "u64",
+              "emission": "u64",
+              "bonds": "Vec<(u32, u64)>",
+              "weights": "Vec<(u32, u32)>"
+            }
+          }
+        }
+      ]
+    },
     "centrifuge": {
       "types": [
         {
@@ -31370,6 +31406,27 @@ export const typesBundle = {
             },
             "version": 1
           }
+        ],
+        "AssetSwitch": [
+          {
+            "methods": {
+              "pool_account_id": {
+                "description": "Calculate the pool account address for a switch pallet instance and asset ID",
+                "params": [
+                  {
+                    "name": "pair_id",
+                    "type": "Text"
+                  },
+                  {
+                    "name": "asset_id",
+                    "type": "XcmVersionedAssetId"
+                  }
+                ],
+                "type": "Result<AccountId32, AssetSwitchApiError>"
+              }
+            },
+            "version": 1
+          }
         ]
       },
       "types": [
@@ -34677,6 +34734,118 @@ export const typesBundle = {
         {
           "minmax": [
             11200,
+            11399
+          ],
+          "types": {
+            "DidApiAccountId": "PalletDidLookupLinkableAccountLinkableAccountId",
+            "RawDidLinkedInfo": {
+              "identifier": "AccountId32",
+              "accounts": "Vec<DidApiAccountId>",
+              "w3n": "Option<Text>",
+              "serviceEndpoints": "Vec<DidServiceEndpointsDidEndpoint>",
+              "details": "DidDidDetails"
+            },
+            "PublicCredentialFilter": {
+              "_enum": {
+                "ctypeHash": "Hash",
+                "attester": "AccountId32"
+              }
+            },
+            "PublicCredentialError": {
+              "_enum": [
+                "InvalidSubjectId"
+              ]
+            },
+            "StakingRates": {
+              "collatorStakingRate": "Perquintill",
+              "collatorRewardRate": "Perquintill",
+              "delegatorStakingRate": "Perquintill",
+              "delegatorRewardRate": "Perquintill"
+            },
+            "IdentityCommitmentVersion": "u16",
+            "DipProofRequest": {
+              "identifier": "AccountId32",
+              "version": "IdentityCommitmentVersion",
+              "proofKeys": "Vec<Hash>",
+              "accounts": "Vec<PalletDidLookupLinkableAccountLinkableAccountId>",
+              "shouldIncludeWeb3Name": "bool"
+            },
+            "CompleteMerkleProof": {
+              "root": "MerkleRoot",
+              "proof": "MerkleProof"
+            },
+            "MerkleRoot": "Hash",
+            "MerkleProof": {
+              "blinded": "BlindedLeaves",
+              "revealed": "RevealedLeaves"
+            },
+            "BlindedLeaves": "Vec<BlindedValue>",
+            "BlindedValue": "Bytes",
+            "RevealedLeaves": "Vec<RevealedLeaf>",
+            "RevealedLeaf": {
+              "_enum": {
+                "DidKey": "RevealedDidKey",
+                "Web3Name": "RevealedWeb3Name",
+                "LinkedAccount": "RevealedAccountId"
+              }
+            },
+            "RevealedDidKey": {
+              "id": "Hash",
+              "relationship": "KeyRelationship",
+              "details": "DidDidDetailsDidPublicKeyDetails"
+            },
+            "KeyRelationship": {
+              "_enum": {
+                "Encryption": "Null",
+                "Verification": "VerificationRelationship"
+              }
+            },
+            "VerificationRelationship": {
+              "_enum": [
+                "Authentication",
+                "CapabilityDelegation",
+                "CapabilityInvocation",
+                "AssertionMethod"
+              ]
+            },
+            "RevealedWeb3Name": {
+              "web3Name": "Text",
+              "claimedAt": "BlockNumber"
+            },
+            "RevealedAccountId": "PalletDidLookupLinkableAccountLinkableAccountId",
+            "RuntimeApiDipProofError": {
+              "_enum": {
+                "IdentityProvider": "LinkedDidIdentityProviderError",
+                "MerkleProof": "DidMerkleProofError"
+              }
+            },
+            "LinkedDidIdentityProviderError": {
+              "_enum": [
+                "DidNotFound",
+                "DidDeleted",
+                "Internal"
+              ]
+            },
+            "DidIdentityProviderError": {
+              "_enum": [
+                "DidNotFound",
+                "Internal"
+              ]
+            },
+            "DidMerkleProofError": {
+              "_enum": [
+                "UnsupportedVersion",
+                "KeyNotFound",
+                "LinkedAccountNotFound",
+                "Web3NameNotFound",
+                "Internal"
+              ]
+            }
+          }
+        },
+        {
+          "minmax": [
+            11400,
             null
           ],
           "types": {
@@ -34781,6 +34950,13 @@ export const typesBundle = {
                 "KeyNotFound",
                 "LinkedAccountNotFound",
                 "Web3NameNotFound",
+                "Internal"
+              ]
+            },
+            "AssetSwitchApiError": {
+              "_enum": [
+                "InvalidInput",
+                "SwitchPoolNotFound",
                 "Internal"
               ]
             }
@@ -35003,6 +35179,27 @@ export const typesBundle = {
             },
             "version": 1
           }
+        ],
+        "AssetSwitch": [
+          {
+            "methods": {
+              "pool_account_id": {
+                "description": "Calculate the pool account address for a switch pallet instance and asset ID",
+                "params": [
+                  {
+                    "name": "pair_id",
+                    "type": "Text"
+                  },
+                  {
+                    "name": "asset_id",
+                    "type": "XcmVersionedAssetId"
+                  }
+                ],
+                "type": "Result<AccountId32, AssetSwitchApiError>"
+              }
+            },
+            "version": 1
+          }
         ]
       },
       "types": [
@@ -38310,6 +38507,118 @@ export const typesBundle = {
         {
           "minmax": [
             11200,
+            11399
+          ],
+          "types": {
+            "DidApiAccountId": "PalletDidLookupLinkableAccountLinkableAccountId",
+            "RawDidLinkedInfo": {
+              "identifier": "AccountId32",
+              "accounts": "Vec<DidApiAccountId>",
+              "w3n": "Option<Text>",
+              "serviceEndpoints": "Vec<DidServiceEndpointsDidEndpoint>",
+              "details": "DidDidDetails"
+            },
+            "PublicCredentialFilter": {
+              "_enum": {
+                "ctypeHash": "Hash",
+                "attester": "AccountId32"
+              }
+            },
+            "PublicCredentialError": {
+              "_enum": [
+                "InvalidSubjectId"
+              ]
+            },
+            "StakingRates": {
+              "collatorStakingRate": "Perquintill",
+              "collatorRewardRate": "Perquintill",
+              "delegatorStakingRate": "Perquintill",
+              "delegatorRewardRate": "Perquintill"
+            },
+            "IdentityCommitmentVersion": "u16",
+            "DipProofRequest": {
+              "identifier": "AccountId32",
+              "version": "IdentityCommitmentVersion",
+              "proofKeys": "Vec<Hash>",
+              "accounts": "Vec<PalletDidLookupLinkableAccountLinkableAccountId>",
+              "shouldIncludeWeb3Name": "bool"
+            },
+            "CompleteMerkleProof": {
+              "root": "MerkleRoot",
+              "proof": "MerkleProof"
+            },
+            "MerkleRoot": "Hash",
+            "MerkleProof": {
+              "blinded": "BlindedLeaves",
+              "revealed": "RevealedLeaves"
+            },
+            "BlindedLeaves": "Vec<BlindedValue>",
+            "BlindedValue": "Bytes",
+            "RevealedLeaves": "Vec<RevealedLeaf>",
+            "RevealedLeaf": {
+              "_enum": {
+                "DidKey": "RevealedDidKey",
+                "Web3Name": "RevealedWeb3Name",
+                "LinkedAccount": "RevealedAccountId"
+              }
+            },
+            "RevealedDidKey": {
+              "id": "Hash",
+              "relationship": "KeyRelationship",
+              "details": "DidDidDetailsDidPublicKeyDetails"
+            },
+            "KeyRelationship": {
+              "_enum": {
+                "Encryption": "Null",
+                "Verification": "VerificationRelationship"
+              }
+            },
+            "VerificationRelationship": {
+              "_enum": [
+                "Authentication",
+                "CapabilityDelegation",
+                "CapabilityInvocation",
+                "AssertionMethod"
+              ]
+            },
+            "RevealedWeb3Name": {
+              "web3Name": "Text",
+              "claimedAt": "BlockNumber"
+            },
+            "RevealedAccountId": "PalletDidLookupLinkableAccountLinkableAccountId",
+            "RuntimeApiDipProofError": {
+              "_enum": {
+                "IdentityProvider": "LinkedDidIdentityProviderError",
+                "MerkleProof": "DidMerkleProofError"
+              }
+            },
+            "LinkedDidIdentityProviderError": {
+              "_enum": [
+                "DidNotFound",
+                "DidDeleted",
+                "Internal"
+              ]
+            },
+            "DidIdentityProviderError": {
+              "_enum": [
+                "DidNotFound",
+                "Internal"
+              ]
+            },
+            "DidMerkleProofError": {
+              "_enum": [
+                "UnsupportedVersion",
+                "KeyNotFound",
+                "LinkedAccountNotFound",
+                "Web3NameNotFound",
+                "Internal"
+              ]
+            }
+          }
+        },
+        {
+          "minmax": [
+            11400,
             null
           ],
           "types": {
@@ -38414,6 +38723,13 @@ export const typesBundle = {
                 "KeyNotFound",
                 "LinkedAccountNotFound",
                 "Web3NameNotFound",
+                "Internal"
+              ]
+            },
+            "AssetSwitchApiError": {
+              "_enum": [
+                "InvalidInput",
+                "SwitchPoolNotFound",
                 "Internal"
               ]
             }
@@ -41904,6 +42220,118 @@ export const typesBundle = {
         {
           "minmax": [
             11200,
+            11399
+          ],
+          "types": {
+            "DidApiAccountId": "PalletDidLookupLinkableAccountLinkableAccountId",
+            "RawDidLinkedInfo": {
+              "identifier": "AccountId32",
+              "accounts": "Vec<DidApiAccountId>",
+              "w3n": "Option<Text>",
+              "serviceEndpoints": "Vec<DidServiceEndpointsDidEndpoint>",
+              "details": "DidDidDetails"
+            },
+            "PublicCredentialFilter": {
+              "_enum": {
+                "ctypeHash": "Hash",
+                "attester": "AccountId32"
+              }
+            },
+            "PublicCredentialError": {
+              "_enum": [
+                "InvalidSubjectId"
+              ]
+            },
+            "StakingRates": {
+              "collatorStakingRate": "Perquintill",
+              "collatorRewardRate": "Perquintill",
+              "delegatorStakingRate": "Perquintill",
+              "delegatorRewardRate": "Perquintill"
+            },
+            "IdentityCommitmentVersion": "u16",
+            "DipProofRequest": {
+              "identifier": "AccountId32",
+              "version": "IdentityCommitmentVersion",
+              "proofKeys": "Vec<Hash>",
+              "accounts": "Vec<PalletDidLookupLinkableAccountLinkableAccountId>",
+              "shouldIncludeWeb3Name": "bool"
+            },
+            "CompleteMerkleProof": {
+              "root": "MerkleRoot",
+              "proof": "MerkleProof"
+            },
+            "MerkleRoot": "Hash",
+            "MerkleProof": {
+              "blinded": "BlindedLeaves",
+              "revealed": "RevealedLeaves"
+            },
+            "BlindedLeaves": "Vec<BlindedValue>",
+            "BlindedValue": "Bytes",
+            "RevealedLeaves": "Vec<RevealedLeaf>",
+            "RevealedLeaf": {
+              "_enum": {
+                "DidKey": "RevealedDidKey",
+                "Web3Name": "RevealedWeb3Name",
+                "LinkedAccount": "RevealedAccountId"
+              }
+            },
+            "RevealedDidKey": {
+              "id": "Hash",
+              "relationship": "KeyRelationship",
+              "details": "DidDidDetailsDidPublicKeyDetails"
+            },
+            "KeyRelationship": {
+              "_enum": {
+                "Encryption": "Null",
+                "Verification": "VerificationRelationship"
+              }
+            },
+            "VerificationRelationship": {
+              "_enum": [
+                "Authentication",
+                "CapabilityDelegation",
+                "CapabilityInvocation",
+                "AssertionMethod"
+              ]
+            },
+            "RevealedWeb3Name": {
+              "web3Name": "Text",
+              "claimedAt": "BlockNumber"
+            },
+            "RevealedAccountId": "PalletDidLookupLinkableAccountLinkableAccountId",
+            "RuntimeApiDipProofError": {
+              "_enum": {
+                "IdentityProvider": "LinkedDidIdentityProviderError",
+                "MerkleProof": "DidMerkleProofError"
+              }
+            },
+            "LinkedDidIdentityProviderError": {
+              "_enum": [
+                "DidNotFound",
+                "DidDeleted",
+                "Internal"
+              ]
+            },
+            "DidIdentityProviderError": {
+              "_enum": [
+                "DidNotFound",
+                "Internal"
+              ]
+            },
+            "DidMerkleProofError": {
+              "_enum": [
+                "UnsupportedVersion",
+                "KeyNotFound",
+                "LinkedAccountNotFound",
+                "Web3NameNotFound",
+                "Internal"
+              ]
+            }
+          }
+        },
+        {
+          "minmax": [
+            11400,
             null
           ],
           "types": {
@@ -42008,6 +42436,13 @@ export const typesBundle = {
                 "KeyNotFound",
                 "LinkedAccountNotFound",
                 "Web3NameNotFound",
+                "Internal"
+              ]
+            },
+            "AssetSwitchApiError": {
+              "_enum": [
+                "InvalidInput",
+                "SwitchPoolNotFound",
                 "Internal"
               ]
             }
@@ -45484,6 +45919,118 @@ export const typesBundle = {
         {
           "minmax": [
             11200,
+            11399
+          ],
+          "types": {
+            "DidApiAccountId": "PalletDidLookupLinkableAccountLinkableAccountId",
+            "RawDidLinkedInfo": {
+              "identifier": "AccountId32",
+              "accounts": "Vec<DidApiAccountId>",
+              "w3n": "Option<Text>",
+              "serviceEndpoints": "Vec<DidServiceEndpointsDidEndpoint>",
+              "details": "DidDidDetails"
+            },
+            "PublicCredentialFilter": {
+              "_enum": {
+                "ctypeHash": "Hash",
+                "attester": "AccountId32"
+              }
+            },
+            "PublicCredentialError": {
+              "_enum": [
+                "InvalidSubjectId"
+              ]
+            },
+            "StakingRates": {
+              "collatorStakingRate": "Perquintill",
+              "collatorRewardRate": "Perquintill",
+              "delegatorStakingRate": "Perquintill",
+              "delegatorRewardRate": "Perquintill"
+            },
+            "IdentityCommitmentVersion": "u16",
+            "DipProofRequest": {
+              "identifier": "AccountId32",
+              "version": "IdentityCommitmentVersion",
+              "proofKeys": "Vec<Hash>",
+              "accounts": "Vec<PalletDidLookupLinkableAccountLinkableAccountId>",
+              "shouldIncludeWeb3Name": "bool"
+            },
+            "CompleteMerkleProof": {
+              "root": "MerkleRoot",
+              "proof": "MerkleProof"
+            },
+            "MerkleRoot": "Hash",
+            "MerkleProof": {
+              "blinded": "BlindedLeaves",
+              "revealed": "RevealedLeaves"
+            },
+            "BlindedLeaves": "Vec<BlindedValue>",
+            "BlindedValue": "Bytes",
+            "RevealedLeaves": "Vec<RevealedLeaf>",
+            "RevealedLeaf": {
+              "_enum": {
+                "DidKey": "RevealedDidKey",
+                "Web3Name": "RevealedWeb3Name",
+                "LinkedAccount": "RevealedAccountId"
+              }
+            },
+            "RevealedDidKey": {
+              "id": "Hash",
+              "relationship": "KeyRelationship",
+              "details": "DidDidDetailsDidPublicKeyDetails"
+            },
+            "KeyRelationship": {
+              "_enum": {
+                "Encryption": "Null",
+                "Verification": "VerificationRelationship"
+              }
+            },
+            "VerificationRelationship": {
+              "_enum": [
+                "Authentication",
+                "CapabilityDelegation",
+                "CapabilityInvocation",
+                "AssertionMethod"
+              ]
+            },
+            "RevealedWeb3Name": {
+              "web3Name": "Text",
+              "claimedAt": "BlockNumber"
+            },
+            "RevealedAccountId": "PalletDidLookupLinkableAccountLinkableAccountId",
+            "RuntimeApiDipProofError": {
+              "_enum": {
+                "IdentityProvider": "LinkedDidIdentityProviderError",
+                "MerkleProof": "DidMerkleProofError"
+              }
+            },
+            "LinkedDidIdentityProviderError": {
+              "_enum": [
+                "DidNotFound",
+                "DidDeleted",
+                "Internal"
+              ]
+            },
+            "DidIdentityProviderError": {
+              "_enum": [
+                "DidNotFound",
+                "Internal"
+              ]
+            },
+            "DidMerkleProofError": {
+              "_enum": [
+                "UnsupportedVersion",
+                "KeyNotFound",
+                "LinkedAccountNotFound",
+                "Web3NameNotFound",
+                "Internal"
+              ]
+            }
+          }
+        },
+        {
+          "minmax": [
+            11400,
             null
           ],
           "types": {
@@ -45588,6 +46135,13 @@ export const typesBundle = {
                 "KeyNotFound",
                 "LinkedAccountNotFound",
                 "Web3NameNotFound",
+                "Internal"
+              ]
+            },
+            "AssetSwitchApiError": {
+              "_enum": [
+                "InvalidInput",
+                "SwitchPoolNotFound",
                 "Internal"
               ]
             }
@@ -102921,11 +103475,63 @@ export const typesBundle = {
             "description": "Get the root of the forest trie.",
             "params": [
               {
-                "name": "key",
-                "type": "Option<String>"
+                "name": "forest_key",
+                "type": "Option<H256>"
               }
             ],
             "type": "H256"
+          },
+          "isFileInForest": {
+            "description": "Check if a file is in the forest.",
+            "params": [
+              {
+                "name": "forest_key",
+                "type": "Option<H256>"
+              },
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "bool"
+          },
+          "isFileInFileStorage": {
+            "description": "Check if a file is in the file storage.",
+            "params": [
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "GetFileFromFileStorageResult"
+          },
+          "getFileMetadata": {
+            "description": "Get the metadata of a file from the Forest storage.",
+            "params": [
+              {
+                "name": "forest_key",
+                "type": "Option<H256>"
+              },
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "Option<FileMetadata>"
+          },
+          "generateForestProof": {
+            "description": "Generate a SCALE-encoded proof for a group of file keys that might or might not be in the forest.",
+            "params": [
+              {
+                "name": "forest_key",
+                "type": "Option<H256>"
+              },
+              {
+                "name": "challenged_file_keys",
+                "type": "Vec<H256>"
+              }
+            ],
+            "type": "Vec<u8>"
           },
           "insertBcsvKeys": {
             "description": "Generate and insert new keys of type BCSV into the keystore.",
@@ -102953,8 +103559,8 @@ export const typesBundle = {
         "FileSystemApi": [
           {
             "methods": {
-              "query_earliest_file_volunteer_block": {
-                "description": "Query the earliest block number that a BSP can volunteer for a file.",
+              "query_earliest_file_volunteer_tick": {
+                "description": "Query the earliest tick number that a BSP can volunteer for a file.",
                 "params": [
                   {
                     "name": "bspId",
@@ -102980,6 +103586,20 @@ export const typesBundle = {
                   }
                 ],
                 "type": "Result<Vec<ChunkId>, QueryBspConfirmChunksToProveForFileError>"
+              },
+              "query_msp_confirm_chunks_to_prove_for_file": {
+                "description": "Query the chunks that a MSP needs to prove to confirm that it is storing a file.",
+                "params": [
+                  {
+                    "name": "mspId",
+                    "type": "MainStorageProviderId"
+                  },
+                  {
+                    "name": "fileKey",
+                    "type": "H256"
+                  }
+                ],
+                "type": "Result<Vec<ChunkId>, QueryMspConfirmChunksToProveForFileError>"
               }
             },
             "version": 1
@@ -103111,6 +103731,71 @@ export const typesBundle = {
                   }
                 ],
                 "type": "Option<StorageProviderId>"
+              },
+              "get_worst_case_scenario_slashable_amount": {
+                "description": "Get the worst case scenario slashable amount for a provider.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Option<Balance>"
+              },
+              "get_slash_amount_per_max_file_size": {
+                "description": "Get the slashable amount corresponding to the configured max file size.",
+                "params": [],
+                "type": "Balance"
+              },
+              "query_storage_provider_capacity": {
+                "description": "Query the storage provider capacity.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Result<StorageDataUnit, QueryStorageProviderCapacityError>"
+              },
+              "query_available_storage_capacity": {
+                "description": "Query the available storage capacity.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Result<StorageDataUnit, QueryAvailableStorageCapacityError>"
+              },
+              "query_earliest_change_capacity_block": {
+                "description": "Query the earliest block number that a BSP can change its capacity.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "BackupStorageProviderId"
+                  }
+                ],
+                "type": "Result<BlockNumber, QueryEarliestChangeCapacityBlockError>"
+              },
+              "query_msp_id_of_bucket_id": {
+                "description": "Query the MSP ID of a bucket ID.",
+                "params": [
+                  {
+                    "name": "bucketId",
+                    "type": "H256"
+                  }
+                ],
+                "type": "Result<ProviderId, QueryMspIdOfBucketIdError>"
+              },
+              "query_provider_multiaddresses": {
+                "description": "Query the provider's multiaddresses.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Result<Multiaddresses, QueryProviderMultiaddressesError>"
               }
             },
             "version": 1
@@ -103174,6 +103859,14 @@ export const typesBundle = {
                 "IncompleteFile": "IncompleteFileStatus"
               }
             },
+            "GetFileFromFileStorageResult": {
+              "_enum": {
+                "FileNotFound": null,
+                "FileFound": "FileMetadata",
+                "IncompleteFile": "IncompleteFileStatus",
+                "FileFoundWithInconsistency": "FileMetadata"
+              }
+            },
             "ProviderId": "H256",
             "Key": "H256",
             "RandomnessOutput": "H256",
@@ -103183,6 +103876,8 @@ export const typesBundle = {
             "StorageData": "u32",
             "MerklePatriciaRoot": "H256",
             "ChunkId": "u64",
+            "StorageDataUnit": "u32",
+            "Multiaddresses": "BoundedVec<u8, 5>",
             "BackupStorageProvider": {
               "capacity": "StorageData",
               "data_used": "StorageData",
@@ -103251,7 +103946,26 @@ export const typesBundle = {
             "QueryBspConfirmChunksToProveForFileError": {
               "_enum": {
                 "StorageRequestNotFound": null,
+                "ConfirmChunks": "QueryConfirmChunksToProveForFileError",
                 "InternalError": null
+              }
+            },
+            "QueryMspConfirmChunksToProveForFileError": {
+              "_enum": {
+                "StorageRequestNotFound": null,
+                "ConfirmChunks": "QueryConfirmChunksToProveForFileError",
+                "InternalError": null
+              }
+            },
+            "QueryProviderMultiaddressesError": {
+              "_enum": {
+                "ProviderNotRegistered": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryConfirmChunksToProveForFileError": {
+              "_enum": {
+                "ChallengedChunkToChunkIdError": null
               }
             },
             "GetUsersWithDebtOverThresholdError": {
@@ -103260,6 +103974,30 @@ export const typesBundle = {
                 "ProviderWithoutPaymentStreams": null,
                 "AmountToChargeOverflow": null,
                 "DebtOverflow": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryStorageProviderCapacityError": {
+              "_enum": {
+                "ProviderNotRegistered": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryAvailableStorageCapacityError": {
+              "_enum": {
+                "ProviderNotRegistered": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryEarliestChangeCapacityBlockError": {
+              "_enum": {
+                "ProviderNotRegistered": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryMspIdOfBucketIdError": {
+              "_enum": {
+                "BucketNotFound": null,
                 "InternalApiError": null
               }
             }
@@ -103310,11 +104048,63 @@ export const typesBundle = {
             "description": "Get the root of the forest trie.",
             "params": [
               {
-                "name": "key",
-                "type": "Option<String>"
+                "name": "forest_key",
+                "type": "Option<H256>"
               }
             ],
             "type": "H256"
+          },
+          "isFileInForest": {
+            "description": "Check if a file is in the forest.",
+            "params": [
+              {
+                "name": "forest_key",
+                "type": "Option<H256>"
+              },
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "bool"
+          },
+          "isFileInFileStorage": {
+            "description": "Check if a file is in the file storage.",
+            "params": [
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "GetFileFromFileStorageResult"
+          },
+          "getFileMetadata": {
+            "description": "Get the metadata of a file from the Forest storage.",
+            "params": [
+              {
+                "name": "forest_key",
+                "type": "Option<H256>"
+              },
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "Option<FileMetadata>"
+          },
+          "generateForestProof": {
+            "description": "Generate a SCALE-encoded proof for a group of file keys that might or might not be in the forest.",
+            "params": [
+              {
+                "name": "forest_key",
+                "type": "Option<H256>"
+              },
+              {
+                "name": "challenged_file_keys",
+                "type": "Vec<H256>"
+              }
+            ],
+            "type": "Vec<u8>"
           },
           "insertBcsvKeys": {
             "description": "Generate and insert new keys of type BCSV into the keystore.",
@@ -103342,8 +104132,8 @@ export const typesBundle = {
         "FileSystemApi": [
           {
             "methods": {
-              "query_earliest_file_volunteer_block": {
-                "description": "Query the earliest block number that a BSP can volunteer for a file.",
+              "query_earliest_file_volunteer_tick": {
+                "description": "Query the earliest tick number that a BSP can volunteer for a file.",
                 "params": [
                   {
                     "name": "bspId",
@@ -103369,6 +104159,20 @@ export const typesBundle = {
                   }
                 ],
                 "type": "Result<Vec<ChunkId>, QueryBspConfirmChunksToProveForFileError>"
+              },
+              "query_msp_confirm_chunks_to_prove_for_file": {
+                "description": "Query the chunks that a MSP needs to prove to confirm that it is storing a file.",
+                "params": [
+                  {
+                    "name": "mspId",
+                    "type": "MainStorageProviderId"
+                  },
+                  {
+                    "name": "fileKey",
+                    "type": "H256"
+                  }
+                ],
+                "type": "Result<Vec<ChunkId>, QueryMspConfirmChunksToProveForFileError>"
               }
             },
             "version": 1
@@ -103500,6 +104304,71 @@ export const typesBundle = {
                   }
                 ],
                 "type": "Option<StorageProviderId>"
+              },
+              "get_worst_case_scenario_slashable_amount": {
+                "description": "Get the worst case scenario slashable amount for a provider.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Option<Balance>"
+              },
+              "get_slash_amount_per_max_file_size": {
+                "description": "Get the slashable amount corresponding to the configured max file size.",
+                "params": [],
+                "type": "Balance"
+              },
+              "query_storage_provider_capacity": {
+                "description": "Query the storage provider capacity.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Result<StorageDataUnit, QueryStorageProviderCapacityError>"
+              },
+              "query_available_storage_capacity": {
+                "description": "Query the available storage capacity.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Result<StorageDataUnit, QueryAvailableStorageCapacityError>"
+              },
+              "query_earliest_change_capacity_block": {
+                "description": "Query the earliest block number that a BSP can change its capacity.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "BackupStorageProviderId"
+                  }
+                ],
+                "type": "Result<BlockNumber, QueryEarliestChangeCapacityBlockError>"
+              },
+              "query_msp_id_of_bucket_id": {
+                "description": "Query the MSP ID of a bucket ID.",
+                "params": [
+                  {
+                    "name": "bucketId",
+                    "type": "H256"
+                  }
+                ],
+                "type": "Result<ProviderId, QueryMspIdOfBucketIdError>"
+              },
+              "query_provider_multiaddresses": {
+                "description": "Query the provider's multiaddresses.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Result<Multiaddresses, QueryProviderMultiaddressesError>"
               }
             },
             "version": 1
@@ -103563,6 +104432,14 @@ export const typesBundle = {
                 "IncompleteFile": "IncompleteFileStatus"
               }
             },
+            "GetFileFromFileStorageResult": {
+              "_enum": {
+                "FileNotFound": null,
+                "FileFound": "FileMetadata",
+                "IncompleteFile": "IncompleteFileStatus",
+                "FileFoundWithInconsistency": "FileMetadata"
+              }
+            },
             "ProviderId": "H256",
             "Key": "H256",
             "RandomnessOutput": "H256",
@@ -103572,6 +104449,8 @@ export const typesBundle = {
             "StorageData": "u32",
             "MerklePatriciaRoot": "H256",
             "ChunkId": "u64",
+            "StorageDataUnit": "u32",
+            "Multiaddresses": "BoundedVec<u8, 5>",
             "BackupStorageProvider": {
               "capacity": "StorageData",
               "data_used": "StorageData",
@@ -103640,7 +104519,26 @@ export const typesBundle = {
             "QueryBspConfirmChunksToProveForFileError": {
               "_enum": {
                 "StorageRequestNotFound": null,
+                "ConfirmChunks": "QueryConfirmChunksToProveForFileError",
                 "InternalError": null
+              }
+            },
+            "QueryMspConfirmChunksToProveForFileError": {
+              "_enum": {
+                "StorageRequestNotFound": null,
+                "ConfirmChunks": "QueryConfirmChunksToProveForFileError",
+                "InternalError": null
+              }
+            },
+            "QueryProviderMultiaddressesError": {
+              "_enum": {
+                "ProviderNotRegistered": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryConfirmChunksToProveForFileError": {
+              "_enum": {
+                "ChallengedChunkToChunkIdError": null
               }
             },
             "GetUsersWithDebtOverThresholdError": {
@@ -103649,6 +104547,30 @@ export const typesBundle = {
                 "ProviderWithoutPaymentStreams": null,
                 "AmountToChargeOverflow": null,
                 "DebtOverflow": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryStorageProviderCapacityError": {
+              "_enum": {
+                "ProviderNotRegistered": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryAvailableStorageCapacityError": {
+              "_enum": {
+                "ProviderNotRegistered": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryEarliestChangeCapacityBlockError": {
+              "_enum": {
+                "ProviderNotRegistered": null,
+                "InternalApiError": null
+              }
+            },
+            "QueryMspIdOfBucketIdError": {
+              "_enum": {
+                "BucketNotFound": null,
                 "InternalApiError": null
               }
             }
