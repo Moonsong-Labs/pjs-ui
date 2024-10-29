@@ -42,7 +42,7 @@
     "@polkadot/networks": "^13.1.1",
     "@polkadot/react-identicon": "^3.10.1",
     "@polkadot/types": "^14.0.1",
-    "@polkadot/types-codec": "^13.2.1",
+    "@polkadot/types-codec": "^14.2.1",
     "@polkadot/util": "^13.1.1",
     "@polkadot/util-crypto": "^13.1.1",
     "@polkadot/wasm-util": "^7.3.2",
