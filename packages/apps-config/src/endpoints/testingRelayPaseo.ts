@@ -3,8 +3,8 @@
 
 import type { EndpointOption } from './types.js';
 
-import { chainsAmplitudeSVG, chainsCoretimeKusamaSVG, chainsFrequencyPaseoSVG, chainsHydrationPaseoSVG, chainsLaosSigmaPNG, chainsMyxcavPNG, chainsPaseoPNG, chainsPeoplePolkadotSVG, chainsPopNetworkSVG } from '@polkadot/apps-config/ui/logos/chains';
-import { nodesAjunaPNG, nodesAssetHubSVG, nodesAventusSVG, nodesBajunPNG, nodesBifrostSVG, nodesBridgeHubSVG, nodesDarwiniaKoiSVG, nodesHyperbridgePNG, nodesIdealNetworkSVG, nodesIntegriteeSVG, nodesKiltPNG, nodesMandalaPNG, nodesMusePNG, nodesMyriadPaseoSVG, nodesNodleSVG, nodesRegionxPNG, nodesRexSVG, nodesZeitgeistPNG } from '@polkadot/apps-config/ui/logos/nodes';
+import { chainsAmplitudeSVG, chainsCoretimeKusamaSVG, chainsFrequencyPaseoSVG, chainsHydrationPaseoSVG, chainsLaosSigmaPNG, chainsMyxcavPNG, chainsPaseoPNG, chainsPeoplePolkadotSVG, chainsPopNetworkSVG, chainsWatrPNG } from '@polkadot/apps-config/ui/logos/chains';
+import { nodesAjunaPNG, nodesAssetHubSVG, nodesAventusSVG, nodesBajunPNG, nodesBifrostSVG, nodesBridgeHubSVG, nodesDarwiniaKoiSVG, nodesHyperbridgePNG, nodesIdealNetworkSVG, nodesIntegriteeSVG, nodesKiltPNG, nodesLitentryPaseoSVG, nodesMandalaPNG, nodesMusePNG, nodesMyriadPaseoSVG, nodesNodleSVG, nodesRegionxPNG, nodesRexSVG, nodesXodePNG, nodesZeitgeistPNG } from '@polkadot/apps-config/ui/logos/nodes';
 
 import { PASEO_GENESIS } from '../api/constants.js';
 // import { testnetParachainSVG } from '../ui/logos/nodes/index.js';
@@ -74,7 +74,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'Bajun(paseo)',
     paraId: 2119,
     providers: {
-      BajunNetwork: 'wss://rpc-paseo.bajun.network'
+      // BajunNetwork: 'wss://rpc-paseo.bajun.network'  https://github.com/polkadot-js/apps/issues/11026
     },
     text: 'Bajun Network (Paseo)',
     ui: {
@@ -152,7 +152,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'Ideal Network',
     paraId: 4502,
     providers: {
-      // 'IDN Node': 'wss://idn0-testnet.idealabs.network' https://github.com/polkadot-js/apps/issues/10966
+      'IDN Node': 'wss://idn0-testnet.idealabs.network'
     },
     text: 'Ideal Network',
     ui: {
@@ -196,6 +196,19 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     ui: {
       color: '#363435',
       logo: chainsLaosSigmaPNG
+    }
+  },
+  {
+    homepage: 'https://www.litentry.com/',
+    info: 'paseoLitentry',
+    paraId: 2106,
+    providers: {
+      Litentry: 'wss://rpc.paseo-parachain.litentry.io'
+    },
+    text: 'Litentry',
+    ui: {
+      color: '#ECDA38',
+      logo: nodesLitentryPaseoSVG
     }
   },
   {
@@ -281,12 +294,24 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'regionxCocos',
     paraId: 4509,
     providers: {
-      RegionX: 'wss://regionx-paseo.regionx.tech'
+      // RegionX: 'wss://regionx-paseo.regionx.tech' // https://github.com/polkadot-js/apps/issues/11098
     },
     text: 'RegionX(Paseo)',
     ui: {
       color: '#0CC184',
       logo: nodesRegionxPNG
+    }
+  },
+  {
+    info: 'paseoWatr',
+    paraId: 2058,
+    providers: {
+      Watr: 'wss://rpc.dev.watr.org'
+    },
+    text: 'Watr Network',
+    ui: {
+      color: '#373b39',
+      logo: chainsWatrPNG
     }
   },
   {
@@ -300,6 +325,19 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     ui: {
       color: '#FF0083',
       logo: chainsMyxcavPNG
+    }
+  },
+  {
+    homepage: 'https://xode.net',
+    info: 'paseoXode',
+    paraId: 4389,
+    providers: {
+      XodeCommunity: 'wss://testrpcnodea01.xode.net/aRoyklGrhl9m2LlhX8NP/rpc'
+    },
+    text: 'Xode',
+    ui: {
+      color: '#ed1f7a',
+      logo: nodesXodePNG
     }
   },
   {
@@ -338,7 +376,7 @@ export const testParasPaseoCommon: EndpointOption[] = [
     }
   },
   {
-    info: 'BridgeHub',
+    info: 'PaseoBridgeHub',
     isPeopleForIdentity: true,
     paraId: 1002,
     providers: {
@@ -354,7 +392,7 @@ export const testParasPaseoCommon: EndpointOption[] = [
     }
   },
   {
-    info: 'Coretime',
+    info: 'PaseoCoretime',
     isPeopleForIdentity: true,
     paraId: 1005,
     providers: {
