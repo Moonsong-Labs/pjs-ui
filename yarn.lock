@@ -640,15 +640,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@frequency-chain/api-augment@npm:1.13.0":
-  version: 1.13.0
-  resolution: "@frequency-chain/api-augment@npm:1.13.0"
+"@frequency-chain/api-augment@npm:1.14.0":
+  version: 1.14.0
+  resolution: "@frequency-chain/api-augment@npm:1.14.0"
   dependencies:
-    "@polkadot/api": "npm:^12.3.1"
-    "@polkadot/rpc-provider": "npm:^12.3.1"
-    "@polkadot/types": "npm:^12.3.1"
+    "@polkadot/api": "npm:^13.2.1"
+    "@polkadot/rpc-provider": "npm:^13.2.1"
+    "@polkadot/types": "npm:^13.2.1"
     globals: "npm:^15.9.0"
-  checksum: 10/8c876a7edeb518b4d76100093be571c98a93e093fdf75faaa37cb18262817ac31e1f94d37e144a9b53e3f6a0b9cbf560ba05c4009aad26344b04886ff634665a
+  checksum: 10/dab6813fcee49c96d4300ebda19a3fa7b7b4736c4983c52e5930bc608b51a14b127239170af4bf9685aa6609b6049649f2e56b770ae40791854c5684572997b5
   languageName: node
   linkType: hard
 
@@ -1334,13 +1334,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pendulum-chain/type-definitions@npm:0.3.8":
-  version: 0.3.8
-  resolution: "@pendulum-chain/type-definitions@npm:0.3.8"
+"@pendulum-chain/type-definitions@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@pendulum-chain/type-definitions@npm:1.1.1"
   dependencies:
     "@babel/runtime": "npm:^7.10.2"
     "@open-web3/orml-type-definitions": "npm:^1.1.4"
-  checksum: 10/64fc2a4d505abb00dc28e9901c7ac2c97c726601debf8b76182d4a93ee277e4e6ccb2109e31d11239cecb7a07e6109685c01476646633e13e4a2329de3da8cc4
+  checksum: 10/bd861df826ea6e9b8d99d9a899a5c1b9d200d4078244fb1eee37856c1f9849df81b94e51d7c03c75581c118bb598f372dd0a7f27b31bcadb2ee2650ef005a568
   languageName: node
   linkType: hard
 
@@ -2099,7 +2099,7 @@ __metadata:
     "@edgeware/node-types": "npm:3.6.2-wako"
     "@equilab/definitions": "npm:1.4.18"
     "@fragnova/api-augment": "npm:0.1.0-spec-1.0.4-mainnet"
-    "@frequency-chain/api-augment": "npm:1.13.0"
+    "@frequency-chain/api-augment": "npm:1.14.0"
     "@interlay/interbtc-types": "npm:1.13.0"
     "@kiltprotocol/type-definitions": "npm:^1.11401.0"
     "@laminar/type-definitions": "npm:0.3.1"
@@ -2108,22 +2108,22 @@ __metadata:
     "@metaverse-network-sdk/type-definitions": "npm:0.0.1-16"
     "@parallel-finance/type-definitions": "npm:2.0.1"
     "@peaqnetwork/type-definitions": "npm:0.0.4"
-    "@pendulum-chain/type-definitions": "npm:0.3.8"
+    "@pendulum-chain/type-definitions": "npm:1.1.1"
     "@phala/typedefs": "npm:0.2.33"
     "@polkadot/api": "npm:^14.0.1"
     "@polkadot/api-derive": "npm:^14.0.1"
     "@polkadot/networks": "npm:^13.1.1"
     "@polkadot/react-identicon": "npm:^3.10.1"
     "@polkadot/types": "npm:^14.0.1"
-    "@polkadot/types-codec": "npm:^13.2.1"
+    "@polkadot/types-codec": "npm:^14.2.1"
     "@polkadot/util": "npm:^13.1.1"
     "@polkadot/util-crypto": "npm:^13.1.1"
     "@polkadot/wasm-util": "npm:^7.3.2"
     "@polkadot/x-fetch": "npm:^13.1.1"
     "@polkadot/x-ws": "npm:^13.1.1"
-    "@polymeshassociation/polymesh-types": "npm:5.12.1"
+    "@polymeshassociation/polymesh-types": "npm:5.15.0"
     "@snowfork/snowbridge-types": "npm:0.2.7"
-    "@sora-substrate/type-definitions": "npm:1.40.3"
+    "@sora-substrate/type-definitions": "npm:1.44.1"
     "@storagehub/types-bundle": "npm:0.1.3"
     "@subsocial/definitions": "npm:0.8.14"
     "@unique-nft/opal-testnet-types": "npm:1003.70.0"
@@ -3009,10 +3009,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polymeshassociation/polymesh-types@npm:5.12.1":
-  version: 5.12.1
-  resolution: "@polymeshassociation/polymesh-types@npm:5.12.1"
-  checksum: 10/db12176936a71024f2d028ac41fbff085740876bacfdbb8c434d48b77f56f25b81003281b02dea812f42c18fb005e58bd31523e94461505e95798c294226fa44
+"@polymeshassociation/polymesh-types@npm:5.15.0":
+  version: 5.15.0
+  resolution: "@polymeshassociation/polymesh-types@npm:5.15.0"
+  checksum: 10/a4185b0464f81ab0ea752b363ce1989ace426a7dfcdd1769ef12507acf52d2f0d5bf8eb22f6468b4d960d80377e6e5cf3b12a84410e0e2777e516212f962823e
   languageName: node
   linkType: hard
 
@@ -3328,12 +3328,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sora-substrate/type-definitions@npm:1.40.3":
-  version: 1.40.3
-  resolution: "@sora-substrate/type-definitions@npm:1.40.3"
+"@sora-substrate/type-definitions@npm:1.44.1":
+  version: 1.44.1
+  resolution: "@sora-substrate/type-definitions@npm:1.44.1"
   dependencies:
     "@open-web3/orml-type-definitions": "npm:1.1.4"
-  checksum: 10/b9178109b92d822afa14663de112023074604212ac52fd027fbec2179febca1a3bf41b5fd9406d78c3305ddd0bb03186d98d4fba3bdf049f947fc1af42a28a8d
+  checksum: 10/e7590d4411f97f52f6623e35b80f490415f13b2589775ea3b2830304461ade853de0d3bb002b05a68adc324b888f02abb3ec18c992203e539a883e40e717c4ee
   languageName: node
   linkType: hard
 
