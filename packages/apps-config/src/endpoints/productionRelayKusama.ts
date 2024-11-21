@@ -354,8 +354,8 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
       Dwellir: 'wss://khala-rpc.dwellir.com',
       Helikon: 'wss://rpc.helikon.io/khala',
       OnFinality: 'wss://khala.api.onfinality.io/public-ws',
-      Phala: 'wss://khala-api.phala.network/ws',
-      RadiumBlock: 'wss://khala.public.curie.radiumblock.co/ws'
+      Phala: 'wss://khala-api.phala.network/ws'
+      // RadiumBlock: 'wss://khala.public.curie.radiumblock.co/ws' // https://github.com/polkadot-js/apps/issues/11098
       // Rockx: 'wss://rockx-khala.w3node.com/polka-public-khala/ws' // https://github.com/polkadot-js/apps/issues/10728
     },
     text: 'Khala Network',
@@ -665,11 +665,11 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     info: 'robonomics',
     paraId: 2048,
     providers: {
-      Airalab: 'wss://kusama.rpc.robonomics.network/',
+      Airalab: 'wss://kusama.rpc.robonomics.network/'
       // Dwellir: 'wss://robonomics-rpc.dwellir.com', // https://github.com/polkadot-js/apps/issues/10912
       // Leemo: 'wss://robonomics.leemo.me', // https://github.com/polkadot-js/apps/issues/9817
       // OnFinality: 'wss://robonomics.api.onfinality.io/public-ws', // https://github.com/polkadot-js/apps/issues/9824
-      Samsara: 'wss://robonomics.0xsamsara.com'
+      // Samsara: 'wss://robonomics.0xsamsara.com' https://github.com/polkadot-js/apps/issues/11026
     },
     text: 'Robonomics',
     ui: {
@@ -683,10 +683,10 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     isUnreachable: true,
     paraId: 2240,
     providers: {
-      Airalab: 'wss://kusama.rpc.robonomics.network/',
+      Airalab: 'wss://kusama.rpc.robonomics.network/'
       // Leemo: 'wss://robonomics.leemo.me', // https://github.com/polkadot-js/apps/issues/9817
       // OnFinality: 'wss://robonomics.api.onfinality.io/public-ws', // https://github.com/polkadot-js/apps/issues/9824
-      Samsara: 'wss://robonomics.0xsamsara.com'
+      // Samsara: 'wss://robonomics.0xsamsara.com' https://github.com/polkadot-js/apps/issues/11026
     },
     text: 'Robonomics 2',
     ui: {
@@ -717,7 +717,7 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
       Blast: 'wss://shiden.public.blastapi.io',
       Dwellir: 'wss://shiden-rpc.dwellir.com',
       OnFinality: 'wss://shiden.api.onfinality.io/public-ws',
-      RadiumBlock: 'wss://shiden.public.curie.radiumblock.co/ws',
+      // RadiumBlock: 'wss://shiden.public.curie.radiumblock.co/ws', // https://github.com/polkadot-js/apps/issues/11098
       'light client': 'light://substrate-connect/kusama/shiden'
     },
     text: 'Shiden',
@@ -834,8 +834,8 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     info: 'turing',
     paraId: 2114,
     providers: {
-      Dwellir: 'wss://turing-rpc.dwellir.com',
-      OAK: 'wss://rpc.turing.oak.tech'
+      Dwellir: 'wss://turing-rpc.dwellir.com'
+      // OAK: 'wss://rpc.turing.oak.tech' // https://github.com/polkadot-js/apps/issues/11098
     },
     text: 'Turing Network',
     ui: {
@@ -886,7 +886,7 @@ export const prodParasKusama: Omit<EndpointOption, 'teleport'>[] = [
     paraId: 2236,
     providers: {
       // 'Zero Network': 'wss://rpc-1.kusama.node.zero.io' // https://github.com/polkadot-js/apps/issues/10803
-      GameDAO: 'wss://rpc-1.gamedao.net'
+      // GameDAO: 'wss://rpc-1.gamedao.net' https://github.com/polkadot-js/apps/issues/11026
     },
     text: 'ZERO Canary',
     ui: {
@@ -932,7 +932,7 @@ export const prodParasKusamaCommon: EndpointOption[] = [
       LuckyFriday: 'wss://rpc-bridge-hub-kusama.luckyfriday.io',
       // OnFinality: 'wss://bridgehub-kusama.api.onfinality.io/public-ws',
       Parity: 'wss://kusama-bridge-hub-rpc.polkadot.io',
-      RadiumBlock: 'wss://bridgehub-kusama.public.curie.radiumblock.co/ws',
+      // RadiumBlock: 'wss://bridgehub-kusama.public.curie.radiumblock.co/ws', // https://github.com/polkadot-js/apps/issues/11098
       Stakeworld: 'wss://ksm-rpc.stakeworld.io/bridgehub'
     },
     relayName: 'kusama',
@@ -1029,7 +1029,7 @@ export const prodRelayKusama: EndpointOption = {
     RadiumBlock: 'wss://kusama.public.curie.radiumblock.co/ws',
     RockX: 'wss://rockx-ksm.w3node.com/polka-public-ksm/ws',
     Stakeworld: 'wss://ksm-rpc.stakeworld.io',
-    SubQuery: 'wss://kusama.rpc.subquery.network/public/ws',
+    // SubQuery: 'wss://kusama.rpc.subquery.network/public/ws', https://github.com/polkadot-js/apps/issues/11026
     'light client': 'light://substrate-connect/kusama'
   },
   teleport: getTeleports(prodParasKusamaCommon),

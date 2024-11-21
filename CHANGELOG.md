@@ -1,5 +1,64 @@
 # CHANGELOG
 
+## 0.146.1 Nov 12, 2024
+
+Contributed:
+
+- Add Subquery rpc (Thanks to https://github.com/fewensa)
+- Re-enable Hydration Paseo rpc (Thanks to https://github.com/jak-pan)
+- Remove `needsAccounts` from fellowship and ambassador routing (Thanks to https://github.com/wirednkod)
+- Fix Api check foor treasury page (Thanks to https://github.com/sesh92)
+- Re-add IDN node provider (Thanks to https://github.com/juangirini)
+- Add watr to paseo (Thanks to https://github.com/Mrigesh901)
+- Add xode to paseo (Thanks to https://github.com/Mrigesh901)
+- Add Autonomys mainnet and Taurus testnet endpoints (Thanks to https://github.com/jfrank-summit)
+
+Changes:
+
+- Export all from Paseo Apps-config
+- Disable unreachable endpoints
+- Add Relay Chain Coretime Overview Tab
+- Fix treasury page, and disable propose button
+- Bump dev to 0.82.1 w/ typescript w/ tslib
+- Fix showing waiting, active, and inactive nomination on the accounts page
+- Fix staking payouts
+- Update polkadot-js deps
+    - @polkadot/api -> 14.3.1
+    - @polkadot/common -> 13.2.3
+    - @polkadot/phishing -> 0.24.3
+    - @polkadot/wasm-crypto -> 7.4.1
+    - @polkadot/tools -> 0.60.3
+    - @polkadot/extension -> 0.56.2
+    - @polkadot/ui -> 3.11.3
+- Remove macos from electron CI build
+
+
+## 0.145.1 Oct 15, 2024
+
+Contributed:
+
+- Bump KILT dep (Thanks to https://github.com/ntn-x2)
+- Remove rococoAmplitude and add paseoAmplitude (Thanks to https://github.com/gianfra-t)
+- Renamed riot to matrix while displaying identity  (Thanks to https://github.com/niklabh)
+- Update translation: Bahasa Indonesia (Thanks to https://github.com/xryoshi)
+- Change robonomics parachains colors (Thanks to https://github.com/PavelSheremetev)
+- Add the official RPC for parallel network (Thanks to https://github.com/dio-will)
+- Update Zero Canary Endpoints for productionRelayKusama.ts (Thanks to https://github.com/2075)
+- RadiumBlock would like to bring up our Moonbase endpoints in Curie. Our high performance, highly distributed Endpoint Delivery Network. (Thanks to https://github.com/radiumb)
+- Update subsquare supported chains (Thanks to https://github.com/wliyongfeng)
+- Add RegionX Paseo (Thanks to https://github.com/Szegoo)
+- Deleted OnFinality 3 endpoints (Thanks to https://github.com/FiveKG)
+
+Changes:
+- Reflecting changes to Identity pallet  
+- Patch for crashing explorer
+- H160 address parsing issues on Address book and AccountName component
+- Naming issue for Paseo People chain
+- Remove Rococo relay and parachains
+- Add bittensor types to types bundle
+- Update polkadot-js deps
+- Disable unreachable endpoints
+
 ## 0.144.1 Sep 24, 2024
 
 Contributed:

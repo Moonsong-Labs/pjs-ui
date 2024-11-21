@@ -108,9 +108,9 @@ export const prodParasPolkadot: Omit<EndpointOption, 'teleport'>[] = [
       IBP1: 'wss://bifrost-polkadot.ibp.network',
       IBP2: 'wss://bifrost-polkadot.dotters.network',
       Liebi: 'wss://hk.p.bifrost-rpc.liebi.com/ws',
-      LiebiEU: 'wss://eu.bifrost-polkadot-rpc.liebi.com/ws',
+      LiebiEU: 'wss://eu.bifrost-polkadot-rpc.liebi.com/ws'
       // OnFinality: 'wss://bifrost-polkadot.api.onfinality.io/public-ws',
-      RadiumBlock: 'wss://bifrost.public.curie.radiumblock.co/ws'
+      // RadiumBlock: 'wss://bifrost.public.curie.radiumblock.co/ws' // https://github.com/polkadot-js/apps/issues/11098
     },
     text: 'Bifrost',
     ui: {
@@ -226,7 +226,8 @@ export const prodParasPolkadot: Omit<EndpointOption, 'teleport'>[] = [
     providers: {
       Darwinia: 'wss://rpc.darwinia.network',
       Dcdao: 'wss://darwinia-rpc.dcdao.box',
-      Dwellir: 'wss://darwinia-rpc.dwellir.com'
+      Dwellir: 'wss://darwinia-rpc.dwellir.com',
+      Subquery: 'wss://darwinia.rpc.subquery.network/public/ws'
     },
     text: 'Darwinia',
     ui: {
@@ -871,7 +872,7 @@ export const prodParasPolkadotCommon: EndpointOption[] = [
       LuckyFriday: 'wss://rpc-asset-hub-polkadot.luckyfriday.io',
       OnFinality: 'wss://statemint.api.onfinality.io/public-ws',
       Parity: 'wss://polkadot-asset-hub-rpc.polkadot.io',
-      RadiumBlock: 'wss://statemint.public.curie.radiumblock.co/ws',
+      // RadiumBlock: 'wss://statemint.public.curie.radiumblock.co/ws', https://github.com/polkadot-js/apps/issues/11098
       Stakeworld: 'wss://dot-rpc.stakeworld.io/assethub'
     },
     relayName: 'polkadot',
