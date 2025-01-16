@@ -2124,7 +2124,7 @@ __metadata:
     "@polymeshassociation/polymesh-types": "npm:5.7.0"
     "@snowfork/snowbridge-types": "npm:0.2.7"
     "@sora-substrate/type-definitions": "npm:1.44.8"
-    "@storagehub/types-bundle": "npm:0.1.5"
+    "@storagehub/types-bundle": "npm:0.2.0"
     "@subsocial/definitions": "npm:0.8.14"
     "@unique-nft/opal-testnet-types": "npm:1003.70.0"
     "@unique-nft/quartz-mainnet-types": "npm:1003.70.0"
@@ -2654,24 +2654,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@polkadot/typegen@npm:12.4.2":
-  version: 12.4.2
-  resolution: "@polkadot/typegen@npm:12.4.2"
+"@polkadot/typegen@npm:*":
+  version: 15.3.1
+  resolution: "@polkadot/typegen@npm:15.3.1"
   dependencies:
-    "@polkadot/api": "npm:12.4.2"
-    "@polkadot/api-augment": "npm:12.4.2"
-    "@polkadot/rpc-augment": "npm:12.4.2"
-    "@polkadot/rpc-provider": "npm:12.4.2"
-    "@polkadot/types": "npm:12.4.2"
-    "@polkadot/types-augment": "npm:12.4.2"
-    "@polkadot/types-codec": "npm:12.4.2"
-    "@polkadot/types-create": "npm:12.4.2"
-    "@polkadot/types-support": "npm:12.4.2"
-    "@polkadot/util": "npm:^13.0.2"
-    "@polkadot/util-crypto": "npm:^13.0.2"
-    "@polkadot/x-ws": "npm:^13.0.2"
+    "@polkadot/api": "npm:15.3.1"
+    "@polkadot/api-augment": "npm:15.3.1"
+    "@polkadot/rpc-augment": "npm:15.3.1"
+    "@polkadot/rpc-provider": "npm:15.3.1"
+    "@polkadot/types": "npm:15.3.1"
+    "@polkadot/types-augment": "npm:15.3.1"
+    "@polkadot/types-codec": "npm:15.3.1"
+    "@polkadot/types-create": "npm:15.3.1"
+    "@polkadot/types-support": "npm:15.3.1"
+    "@polkadot/util": "npm:^13.3.1"
+    "@polkadot/util-crypto": "npm:^13.3.1"
+    "@polkadot/x-ws": "npm:^13.3.1"
     handlebars: "npm:^4.7.8"
-    tslib: "npm:^2.6.3"
+    tslib: "npm:^2.8.1"
     yargs: "npm:^17.7.2"
   bin:
     polkadot-types-chain-info: scripts/polkadot-types-chain-info.mjs
@@ -2679,7 +2679,7 @@ __metadata:
     polkadot-types-from-defs: scripts/polkadot-types-from-defs.mjs
     polkadot-types-internal-interfaces: scripts/polkadot-types-internal-interfaces.mjs
     polkadot-types-internal-metadata: scripts/polkadot-types-internal-metadata.mjs
-  checksum: 10/8608556b776ee3af793c0858893e943b6038e8c846cd2b5f6871b8e0e9d59d32c1ebeed7a17725cdba4cf2ff9a21856dcf92bb88bccabe7b7f7232cbb3322f2e
+  checksum: 10/1dc77d6cba96dad23eb2e4bc5c2a695426d3c30e75403ee72b366cc0147bf873592eec34d662f22e8b19d67f213f956822c768b1db327b5657cf847a649109c4
   languageName: node
   linkType: hard
 
@@ -3378,18 +3378,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storagehub/types-bundle@npm:0.1.5":
-  version: 0.1.5
-  resolution: "@storagehub/types-bundle@npm:0.1.5"
+"@storagehub/types-bundle@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@storagehub/types-bundle@npm:0.2.0"
   dependencies:
-    "@polkadot/api": "npm:12.4.2"
-    "@polkadot/api-base": "npm:12.4.2"
-    "@polkadot/rpc-core": "npm:12.4.2"
-    "@polkadot/typegen": "npm:12.4.2"
-    "@polkadot/types": "npm:12.4.2"
-    "@polkadot/types-codec": "npm:12.4.2"
-    typescript: "npm:5.5.4"
-  checksum: 10/78fc43d0a112d123c78738426fb2ca5c10aeee56e971f8860c8e7a49c32e61fb8d5788777c345bba365dc13873d698ea8270756596a95fcbfd9b6e11cbce2a7f
+    "@polkadot/api": "npm:*"
+    "@polkadot/api-base": "npm:*"
+    "@polkadot/rpc-core": "npm:*"
+    "@polkadot/typegen": "npm:*"
+    "@polkadot/types": "npm:*"
+    "@polkadot/types-codec": "npm:*"
+    typescript: "npm:*"
+  checksum: 10/8b7411d5346d6154ec0822b2b70ba4e539df90d7f9600fa034c86b9bf8a5b188e11e05ad101e82511ff0b3f4795b537a88adc5d67d2e6109d44ad54d6cf37b81
   languageName: node
   linkType: hard
 
@@ -17505,7 +17505,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.6.3, tslib@npm:^2.7.0, tslib@npm:^2.8.0, tslib@npm:^2.8.1":
+"tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.7.0, tslib@npm:^2.8.0, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10/3e2e043d5c2316461cb54e5c7fe02c30ef6dccb3384717ca22ae5c6b5bc95232a6241df19c622d9c73b809bea33b187f6dbc73030963e29950c2141bc32a79f7

@@ -96694,7 +96694,7 @@ export const typesBundle = {
                 "type": "H256"
               }
             ],
-            "type": "FileMetadata"
+            "type": "LoadFileInStorageResult"
           },
           "saveFileToDisk": {
             "description": "Save a file from the local storage to the disk.",
@@ -96790,6 +96790,34 @@ export const typesBundle = {
             ],
             "type": "Vec<u8>"
           },
+          "generateFileKeyProofBspConfirm": {
+            "description": "Generate a SCALE-encoded proof for a file key to allow a BSP to confirm storing it.",
+            "params": [
+              {
+                "name": "bsp_id",
+                "type": "H256"
+              },
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "Vec<u8>"
+          },
+          "generateFileKeyProofMspAccept": {
+            "description": "Generate a SCALE-encoded proof for a file key to allow a MSP to accept storing it.",
+            "params": [
+              {
+                "name": "msp_id",
+                "type": "H256"
+              },
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "Vec<u8>"
+          },
           "insertBcsvKeys": {
             "description": "Generate and insert new keys of type BCSV into the keystore.",
             "params": [
@@ -96809,6 +96837,26 @@ export const typesBundle = {
               }
             ],
             "type": "()"
+          },
+          "addToExcludeList": {
+            "description": "Add filekey to exclude list",
+            "params": [
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "()"
+          },
+          "removeFromExcludeList": {
+            "description": "Remove filekey from exclude list",
+            "params": [
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "()"
           }
         }
       },
@@ -96816,6 +96864,16 @@ export const typesBundle = {
         "FileSystemApi": [
           {
             "methods": {
+              "is_storage_request_open_to_volunteers": {
+                "description": "Check if a storage request is open to volunteers.",
+                "params": [
+                  {
+                    "name": "fileKey",
+                    "type": "H256"
+                  }
+                ],
+                "type": "Result<bool, IsStorageRequestOpenToVolunteersError>"
+              },
               "query_earliest_file_volunteer_tick": {
                 "description": "Query the earliest tick number that a BSP can volunteer for a file.",
                 "params": [
@@ -96873,7 +96931,17 @@ export const typesBundle = {
                     "type": "ProviderId"
                   }
                 ],
-                "type": "Result<BlockNumber, GetLastTickProviderSubmittedProofError>"
+                "type": "Result<BlockNumber, GetProofSubmissionRecordError>"
+              },
+              "get_next_tick_to_submit_proof_for": {
+                "description": "Get the next tick for which the submitter should submit a proof.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Result<BlockNumber, GetProofSubmissionRecordError>"
               },
               "get_last_checkpoint_challenge_tick": {
                 "description": "Get the last checkpoint challenge tick.",
@@ -97063,6 +97131,16 @@ export const typesBundle = {
                   }
                 ],
                 "type": "Vec<ValuePropositionWithId>"
+              },
+              "can_delete_provider": {
+                "description": "Check if a provider can be deleted.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "bool"
               }
             },
             "version": 1
@@ -97094,6 +97172,16 @@ export const typesBundle = {
                   }
                 ],
                 "type": "Vec<AccountId>"
+              },
+              "get_providers_with_payment_streams_with_user": {
+                "description": "Get the Providers that have at least one payment stream with a specific user.",
+                "params": [
+                  {
+                    "name": "userAccount",
+                    "type": "AccountId"
+                  }
+                ],
+                "type": "Vec<ProviderId>"
               }
             },
             "version": 1
@@ -97113,6 +97201,10 @@ export const typesBundle = {
               "location": "Vec<u8>",
               "file_size": "u64",
               "fingerprint": "[u8; 32]"
+            },
+            "LoadFileInStorageResult": {
+              "file_key": "H256",
+              "file_metadata": "FileMetadata"
             },
             "IncompleteFileStatus": {
               "file_metadata": "FileMetadata",
@@ -97152,7 +97244,7 @@ export const typesBundle = {
             "Multiaddresses": "BoundedVec<u8, 5>",
             "ValuePropId": "H256",
             "ValueProposition": {
-              "price_per_unit_of_data_per_block": "u64",
+              "price_per_giga_unit_of_data_per_block": "u64",
               "bucket_data_limit": "StorageDataUnit"
             },
             "ValuePropositionWithId": {
@@ -97174,7 +97266,7 @@ export const typesBundle = {
                 "MainStorageProvider": "MainStorageProviderId"
               }
             },
-            "GetLastTickProviderSubmittedProofError": {
+            "GetProofSubmissionRecordError": {
               "_enum": {
                 "ProviderNotRegistered": null,
                 "ProviderNeverSubmittedProof": null,
@@ -97212,6 +97304,12 @@ export const typesBundle = {
                 "ProviderNotRegistered": null,
                 "ProviderNotInitialised": null,
                 "ArithmeticOverflow": null,
+                "InternalApiError": null
+              }
+            },
+            "IsStorageRequestOpenToVolunteersError": {
+              "_enum": {
+                "StorageRequestNotFound": null,
                 "InternalApiError": null
               }
             },
@@ -97254,6 +97352,7 @@ export const typesBundle = {
                 "ProviderNotRegistered": null,
                 "ProviderWithoutPaymentStreams": null,
                 "AmountToChargeOverflow": null,
+                "AmountToChargeUnderflow": null,
                 "DebtOverflow": null,
                 "InternalApiError": null
               }
@@ -97309,7 +97408,7 @@ export const typesBundle = {
                 "type": "H256"
               }
             ],
-            "type": "FileMetadata"
+            "type": "LoadFileInStorageResult"
           },
           "saveFileToDisk": {
             "description": "Save a file from the local storage to the disk.",
@@ -97405,6 +97504,34 @@ export const typesBundle = {
             ],
             "type": "Vec<u8>"
           },
+          "generateFileKeyProofBspConfirm": {
+            "description": "Generate a SCALE-encoded proof for a file key to allow a BSP to confirm storing it.",
+            "params": [
+              {
+                "name": "bsp_id",
+                "type": "H256"
+              },
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "Vec<u8>"
+          },
+          "generateFileKeyProofMspAccept": {
+            "description": "Generate a SCALE-encoded proof for a file key to allow a MSP to accept storing it.",
+            "params": [
+              {
+                "name": "msp_id",
+                "type": "H256"
+              },
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "Vec<u8>"
+          },
           "insertBcsvKeys": {
             "description": "Generate and insert new keys of type BCSV into the keystore.",
             "params": [
@@ -97424,6 +97551,26 @@ export const typesBundle = {
               }
             ],
             "type": "()"
+          },
+          "addToExcludeList": {
+            "description": "Add filekey to exclude list",
+            "params": [
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "()"
+          },
+          "removeFromExcludeList": {
+            "description": "Remove filekey from exclude list",
+            "params": [
+              {
+                "name": "file_key",
+                "type": "H256"
+              }
+            ],
+            "type": "()"
           }
         }
       },
@@ -97431,6 +97578,16 @@ export const typesBundle = {
         "FileSystemApi": [
           {
             "methods": {
+              "is_storage_request_open_to_volunteers": {
+                "description": "Check if a storage request is open to volunteers.",
+                "params": [
+                  {
+                    "name": "fileKey",
+                    "type": "H256"
+                  }
+                ],
+                "type": "Result<bool, IsStorageRequestOpenToVolunteersError>"
+              },
               "query_earliest_file_volunteer_tick": {
                 "description": "Query the earliest tick number that a BSP can volunteer for a file.",
                 "params": [
@@ -97488,7 +97645,17 @@ export const typesBundle = {
                     "type": "ProviderId"
                   }
                 ],
-                "type": "Result<BlockNumber, GetLastTickProviderSubmittedProofError>"
+                "type": "Result<BlockNumber, GetProofSubmissionRecordError>"
+              },
+              "get_next_tick_to_submit_proof_for": {
+                "description": "Get the next tick for which the submitter should submit a proof.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "Result<BlockNumber, GetProofSubmissionRecordError>"
               },
               "get_last_checkpoint_challenge_tick": {
                 "description": "Get the last checkpoint challenge tick.",
@@ -97678,6 +97845,16 @@ export const typesBundle = {
                   }
                 ],
                 "type": "Vec<ValuePropositionWithId>"
+              },
+              "can_delete_provider": {
+                "description": "Check if a provider can be deleted.",
+                "params": [
+                  {
+                    "name": "providerId",
+                    "type": "ProviderId"
+                  }
+                ],
+                "type": "bool"
               }
             },
             "version": 1
@@ -97709,6 +97886,16 @@ export const typesBundle = {
                   }
                 ],
                 "type": "Vec<AccountId>"
+              },
+              "get_providers_with_payment_streams_with_user": {
+                "description": "Get the Providers that have at least one payment stream with a specific user.",
+                "params": [
+                  {
+                    "name": "userAccount",
+                    "type": "AccountId"
+                  }
+                ],
+                "type": "Vec<ProviderId>"
               }
             },
             "version": 1
@@ -97728,6 +97915,10 @@ export const typesBundle = {
               "location": "Vec<u8>",
               "file_size": "u64",
               "fingerprint": "[u8; 32]"
+            },
+            "LoadFileInStorageResult": {
+              "file_key": "H256",
+              "file_metadata": "FileMetadata"
             },
             "IncompleteFileStatus": {
               "file_metadata": "FileMetadata",
@@ -97767,7 +97958,7 @@ export const typesBundle = {
             "Multiaddresses": "BoundedVec<u8, 5>",
             "ValuePropId": "H256",
             "ValueProposition": {
-              "price_per_unit_of_data_per_block": "u64",
+              "price_per_giga_unit_of_data_per_block": "u64",
               "bucket_data_limit": "StorageDataUnit"
             },
             "ValuePropositionWithId": {
@@ -97789,7 +97980,7 @@ export const typesBundle = {
                 "MainStorageProvider": "MainStorageProviderId"
               }
             },
-            "GetLastTickProviderSubmittedProofError": {
+            "GetProofSubmissionRecordError": {
               "_enum": {
                 "ProviderNotRegistered": null,
                 "ProviderNeverSubmittedProof": null,
@@ -97827,6 +98018,12 @@ export const typesBundle = {
                 "ProviderNotRegistered": null,
                 "ProviderNotInitialised": null,
                 "ArithmeticOverflow": null,
+                "InternalApiError": null
+              }
+            },
+            "IsStorageRequestOpenToVolunteersError": {
+              "_enum": {
+                "StorageRequestNotFound": null,
                 "InternalApiError": null
               }
             },
@@ -97869,6 +98066,7 @@ export const typesBundle = {
                 "ProviderNotRegistered": null,
                 "ProviderWithoutPaymentStreams": null,
                 "AmountToChargeOverflow": null,
+                "AmountToChargeUnderflow": null,
                 "DebtOverflow": null,
                 "InternalApiError": null
               }
