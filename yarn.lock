@@ -12,13 +12,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aashutoshrathi/word-wrap@npm:^1.2.3":
-  version: 1.2.6
-  resolution: "@aashutoshrathi/word-wrap@npm:1.2.6"
-  checksum: 10/6eebd12a5cd03cee38fcb915ef9f4ea557df6a06f642dfc7fe8eb4839eb5c9ca55a382f3604d52c14200b0c214c12af5e1f23d2a6d8e23ef2d016b105a9d6c0a
-  languageName: node
-  linkType: hard
-
 "@acala-network/chopsticks-core@npm:^1.0.1":
   version: 1.0.1
   resolution: "@acala-network/chopsticks-core@npm:1.0.1"
@@ -1310,12 +1303,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parallel-finance/type-definitions@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@parallel-finance/type-definitions@npm:2.0.1"
+"@parallel-finance/type-definitions@npm:2.0.4":
+  version: 2.0.4
+  resolution: "@parallel-finance/type-definitions@npm:2.0.4"
   dependencies:
     "@open-web3/orml-type-definitions": "npm:^2.0.1"
-  checksum: 10/10667f654ef80f11b75c68ba6a8a69536b06b5c83bba8a313220963cca433735917bcc237f9799834793a949a61e2a293b30cb252e78a3ccf249e290177e78ae
+  checksum: 10/d93f077a04b549d5f771f8df5f4a7efeff7b1346345ddb517ed8b54d81b244bdad03945d1fd6e287c5a1c02d75fadd281d15bec7bde052042e0c5d764b7c781b
   languageName: node
   linkType: hard
 
@@ -2113,7 +2106,7 @@ __metadata:
     "@logion/node-api": "npm:0.31.2"
     "@mangata-finance/type-definitions": "npm:^2.1.2"
     "@metaverse-network-sdk/type-definitions": "npm:0.0.1-16"
-    "@parallel-finance/type-definitions": "npm:2.0.1"
+    "@parallel-finance/type-definitions": "npm:2.0.4"
     "@peaqnetwork/type-definitions": "npm:0.0.4"
     "@pendulum-chain/type-definitions": "npm:1.1.1"
     "@phala/typedefs": "npm:0.2.33"
@@ -2130,7 +2123,7 @@ __metadata:
     "@polkadot/x-ws": "npm:^13.3.1"
     "@polymeshassociation/polymesh-types": "npm:5.7.0"
     "@snowfork/snowbridge-types": "npm:0.2.7"
-    "@sora-substrate/type-definitions": "npm:1.44.1"
+    "@sora-substrate/type-definitions": "npm:1.44.8"
     "@storagehub/types-bundle": "npm:0.1.5"
     "@subsocial/definitions": "npm:0.8.14"
     "@unique-nft/opal-testnet-types": "npm:1003.70.0"
@@ -2189,7 +2182,7 @@ __metadata:
     "@polkadot/react-params": "npm:^0.147.2-4-x"
     "@polkadot/react-query": "npm:^0.147.2-4-x"
     "@polkadot/react-signer": "npm:^0.147.2-4-x"
-    "@types/punycode": "npm:^2.1.3"
+    "@types/punycode": "npm:^2.1.4"
     assert: "npm:^2.1.0"
     buffer: "npm:^6.0.3"
     copy-webpack-plugin: "npm:^11.0.0"
@@ -2660,6 +2653,35 @@ __metadata:
     react-is: "*"
   languageName: unknown
   linkType: soft
+
+"@polkadot/typegen@npm:12.4.2":
+  version: 12.4.2
+  resolution: "@polkadot/typegen@npm:12.4.2"
+  dependencies:
+    "@polkadot/api": "npm:12.4.2"
+    "@polkadot/api-augment": "npm:12.4.2"
+    "@polkadot/rpc-augment": "npm:12.4.2"
+    "@polkadot/rpc-provider": "npm:12.4.2"
+    "@polkadot/types": "npm:12.4.2"
+    "@polkadot/types-augment": "npm:12.4.2"
+    "@polkadot/types-codec": "npm:12.4.2"
+    "@polkadot/types-create": "npm:12.4.2"
+    "@polkadot/types-support": "npm:12.4.2"
+    "@polkadot/util": "npm:^13.0.2"
+    "@polkadot/util-crypto": "npm:^13.0.2"
+    "@polkadot/x-ws": "npm:^13.0.2"
+    handlebars: "npm:^4.7.8"
+    tslib: "npm:^2.6.3"
+    yargs: "npm:^17.7.2"
+  bin:
+    polkadot-types-chain-info: scripts/polkadot-types-chain-info.mjs
+    polkadot-types-from-chain: scripts/polkadot-types-from-chain.mjs
+    polkadot-types-from-defs: scripts/polkadot-types-from-defs.mjs
+    polkadot-types-internal-interfaces: scripts/polkadot-types-internal-interfaces.mjs
+    polkadot-types-internal-metadata: scripts/polkadot-types-internal-metadata.mjs
+  checksum: 10/8608556b776ee3af793c0858893e943b6038e8c846cd2b5f6871b8e0e9d59d32c1ebeed7a17725cdba4cf2ff9a21856dcf92bb88bccabe7b7f7232cbb3322f2e
+  languageName: node
+  linkType: hard
 
 "@polkadot/types-augment@npm:^15.2.1":
   version: 15.2.1
@@ -3320,12 +3342,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sora-substrate/type-definitions@npm:1.44.1":
-  version: 1.44.1
-  resolution: "@sora-substrate/type-definitions@npm:1.44.1"
+"@sora-substrate/type-definitions@npm:1.44.8":
+  version: 1.44.8
+  resolution: "@sora-substrate/type-definitions@npm:1.44.8"
   dependencies:
     "@open-web3/orml-type-definitions": "npm:1.1.4"
-  checksum: 10/e7590d4411f97f52f6623e35b80f490415f13b2589775ea3b2830304461ade853de0d3bb002b05a68adc324b888f02abb3ec18c992203e539a883e40e717c4ee
+  checksum: 10/08cfee910610284178b6613bc5304f119ff10ff3c501ec3e22a7e6527536e2ceced6aa4cd0159ffcf74a3e0c1f116dea168582ee09a0937698453b039eb18975
   languageName: node
   linkType: hard
 
@@ -4941,12 +4963,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"agent-base@npm:^7.0.2, agent-base@npm:^7.1.0, agent-base@npm:^7.1.1":
+"agent-base@npm:^7.0.2, agent-base@npm:^7.1.0":
   version: 7.1.1
   resolution: "agent-base@npm:7.1.1"
   dependencies:
     debug: "npm:^4.3.4"
   checksum: 10/c478fec8f79953f118704d007a38f2a185458853f5c45579b9669372bd0e12602e88dc2ad0233077831504f7cd6fcc8251c383375bba5eaaf563b102938bda26
+  languageName: node
+  linkType: hard
+
+"agent-base@npm:^7.1.2":
+  version: 7.1.3
+  resolution: "agent-base@npm:7.1.3"
+  checksum: 10/3db6d8d4651f2aa1a9e4af35b96ab11a7607af57a24f3bc721a387eaa3b5f674e901f0a648b0caefd48f3fd117c7761b79a3b55854e2aebaa96c3f32cf76af84
   languageName: node
   linkType: hard
 
@@ -12284,6 +12313,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0":
+  version: 10.4.3
+  resolution: "lru-cache@npm:10.4.3"
+  checksum: 10/e6e90267360476720fa8e83cc168aa2bf0311f3f2eea20a6ba78b90a885ae72071d9db132f40fda4129c803e7dcec3a6b6a6fbb44ca90b081630b810b5d6a41a
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^11.0.1":
   version: 11.0.2
   resolution: "lru-cache@npm:11.0.2"
@@ -14202,22 +14238,6 @@ __metadata:
   version: 4.0.2
   resolution: "picomatch@npm:4.0.2"
   checksum: 10/ce617b8da36797d09c0baacb96ca8a44460452c89362d7cb8f70ca46b4158ba8bc3606912de7c818eb4a939f7f9015cef3c766ec8a0c6bfc725fdc078e39c717
-  languageName: node
-  linkType: hard
-
-"pinkie-promise@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "pinkie-promise@npm:2.0.1"
-  dependencies:
-    pinkie: "npm:^2.0.0"
-  checksum: 10/b53a4a2e73bf56b6f421eef711e7bdcb693d6abb474d57c5c413b809f654ba5ee750c6a96dd7225052d4b96c4d053cdcb34b708a86fceed4663303abee52fcca
-  languageName: node
-  linkType: hard
-
-"pinkie@npm:^2.0.0":
-  version: 2.0.4
-  resolution: "pinkie@npm:2.0.4"
-  checksum: 10/11d207257a044d1047c3755374d36d84dda883a44d030fe98216bf0ea97da05a5c9d64e82495387edeb9ee4f52c455bca97cdb97629932be65e6f54b29f5aec8
   languageName: node
   linkType: hard
 
@@ -16337,6 +16357,27 @@ __metadata:
     uuid: "npm:^8.3.2"
     websocket-driver: "npm:^0.7.4"
   checksum: 10/36312ec9772a0e536b69b72e9d1c76bd3d6ecf885c5d8fd6e59811485c916b8ce75f46ec57532f436975815ee14aa9a0e22ae3d9e5c0b18ea37b56d0aaaf439c
+  languageName: node
+  linkType: hard
+
+"socks-proxy-agent@npm:^8.0.3":
+  version: 8.0.5
+  resolution: "socks-proxy-agent@npm:8.0.5"
+  dependencies:
+    agent-base: "npm:^7.1.2"
+    debug: "npm:^4.3.4"
+    socks: "npm:^2.8.3"
+  checksum: 10/ee99e1dacab0985b52cbe5a75640be6e604135e9489ebdc3048635d186012fbaecc20fbbe04b177dee434c319ba20f09b3e7dfefb7d932466c0d707744eac05c
+  languageName: node
+  linkType: hard
+
+"socks@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "socks@npm:2.8.3"
+  dependencies:
+    ip-address: "npm:^9.0.5"
+    smart-buffer: "npm:^4.2.0"
+  checksum: 10/ffcb622c22481dfcd7589aae71fbfd71ca34334064d181df64bf8b7feaeee19706aba4cffd1de35cc7bbaeeaa0af96be2d7f40fcbc7bc0ab69533a7ae9ffc4fb
   languageName: node
   linkType: hard
 
