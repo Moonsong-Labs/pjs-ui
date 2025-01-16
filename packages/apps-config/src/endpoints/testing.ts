@@ -1,4 +1,4 @@
-// Copyright 2017-2024 @polkadot/apps-config authors & contributors
+// Copyright 2017-2025 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { EndpointOption } from './types.js';
@@ -106,6 +106,17 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
     ui: {
       color: '#121212',
       logo: nodesJazPNG
+    }
+  },
+  {
+    info: 'autonomys-taurus-evm',
+    providers: {
+      Labs: 'wss://auto-evm.taurus.autonomys.xyz/ws'
+    },
+    text: 'Autonomys Taurus EVM',
+    ui: {
+      color: '#5870B3',
+      logo: nodesAutonomysPNG
     }
   },
   {
@@ -310,7 +321,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'encointer',
     providers: {
-      'Encointer Association': 'wss://gesell.encointer.org'
+      // 'Encointer Association': 'wss://gesell.encointer.org' // https://github.com/polkadot-js/apps/issues/11186
     },
     text: 'Encointer Gesell',
     ui: {
@@ -442,7 +453,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'interlay-testnet',
     providers: {
-      Interlay: 'wss://api-testnet.interlay.io/parachain/'
+      // Interlay: 'wss://api-testnet.interlay.io/parachain/' https://github.com/polkadot-js/apps/issues/11157
     },
     text: 'Interlay Testnet',
     ui: {
@@ -488,7 +499,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'jur',
     providers: {
-      Jur: 'wss://testnet.jur.io'
+      // Jur: 'wss://testnet.jur.io' // https://github.com/polkadot-js/apps/issues/11186
     },
     text: 'Jur Testnet',
     ui: {

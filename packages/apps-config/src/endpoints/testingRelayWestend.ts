@@ -1,4 +1,4 @@
-// Copyright 2017-2024 @polkadot/apps-config authors & contributors
+// Copyright 2017-2025 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { EndpointOption } from './types.js';
@@ -63,6 +63,19 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
+    info: 'westendPenpal',
+    isPeopleForIdentity: true,
+    paraId: 2042,
+    providers: {
+      Parity: 'wss://westend-penpal-rpc.polkadot.io'
+    },
+    relayName: 'westend',
+    text: 'Penpal',
+    ui: {
+      color: '#964b00'
+    }
+  },
+  {
     homepage: 'https://kylin.network/',
     info: 'westendPichiu',
     paraId: 2112,
@@ -118,7 +131,7 @@ export const testParasWestendCommon: EndpointOption[] = [
     providers: {
       Dwellir: 'wss://asset-hub-westend-rpc.dwellir.com',
       'Dwellir Tunisia': 'wss://westmint-rpc-tn.dwellir.com',
-      IBP1: 'wss://sys.ibp.network/westmint',
+      IBP1: 'wss://sys.ibp.network/asset-hub-westend',
       IBP2: 'wss://asset-hub-westend.dotters.network',
       // OnFinality: 'wss://westmint.api.onfinality.io/public-ws', // https://github.com/polkadot-js/apps/issues/9955
       Parity: 'wss://westend-asset-hub-rpc.polkadot.io'
@@ -225,7 +238,7 @@ export const testRelayWestend: EndpointOption = {
     // LuckyFriday: 'wss://rpc-westend.luckyfriday.io', // https://github.com/polkadot-js/apps/issues/10728
     OnFinality: 'wss://westend.api.onfinality.io/public-ws',
     Parity: 'wss://westend-rpc.polkadot.io',
-    // RadiumBlock: 'wss://westend.public.curie.radiumblock.co/ws', // https://github.com/polkadot-js/apps/issues/11098
+    RadiumBlock: 'wss://westend.public.curie.radiumblock.co/ws',
     // Stakeworld: 'wss://wnd-rpc.stakeworld.io',
     'light client': 'light://substrate-connect/westend'
   },
